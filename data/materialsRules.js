@@ -1,101 +1,141 @@
-import Image from "next/image";
+const materialsRules = {
+  master_bathroom: {
+    label: "Master Bathroom",
+    items: [
+      {
+        id: "toilet",
+        label: "Toilet",
+        cost: 450,
+      },
+      {
+        id: "bathtub",
+        label: "Bathtub",
+        cost: 1000,
+      },
+      {
+        id: "framing_and_cement_board",
+        label: "Framing & Cement Board",
+        cost: 1100,
+      },
+      {
+        id: "vanity_cabinet",
+        label: "Vanity Cabinet",
+        cost: 2000,
+      },
+      {
+        id: "mirror",
+        label: "Mirror",
+        cost: 300,
+      },
+      {
+        id: "ceramic_tile_extra_large_bathroom",
+        label: "Ceramic Tile — Extra Large Bathroom",
+        cost: 720,
+      },
+      {
+        id: "ceramic_tile_medium_bathroom",
+        label: "Ceramic Tile — Medium Bathroom",
+        cost: 450,
+      },
+      {
+        id: "porcelain_tile_extra_large_bathroom",
+        label: "Porcelain Tile — Extra Large Bathroom",
+        cost: 1296,
+      },
+      {
+        id: "porcelain_tile_medium_bathroom",
+        label: "Porcelain Tile — Medium Bathroom",
+        cost: 810,
+      },
+      {
+        id: "marble_tile_extra_large_bathroom",
+        label: "Marble Tile — Extra Large Bathroom",
+        cost: 3600,
+      },
+      {
+        id: "marble_tile_medium_bathroom",
+        label: "Marble Tile — Medium Bathroom",
+        cost: 2250,
+      },
+    ],
+  },
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  guest_bathroom: {
+    label: "Guest Bathroom",
+    items: [
+      {
+        id: "toilet",
+        label: "Toilet",
+        cost: 450,
+      },
+      {
+        id: "bathtub",
+        label: "Bathtub",
+        cost: 600,
+      },
+      {
+        id: "framing_and_cement_board",
+        label: "Framing & Cement Board",
+        cost: 900,
+      },
+      {
+        id: "vanity_cabinet",
+        label: "Vanity Cabinet",
+        cost: 600,
+      },
+      {
+        id: "mirror",
+        label: "Mirror",
+        cost: 200,
+      },
+      {
+        id: "ceramic_tile_full_bathroom",
+        label: "Ceramic Tile — Full Bathroom",
+        cost: 125,
+      },
+      {
+        id: "porcelain_tile_full_bathroom",
+        label: "Porcelain Tile — Full Bathroom",
+        cost: 225,
+      },
+      {
+        id: "marble_tile_full_bathroom",
+        label: "Marble Tile — Full Bathroom",
+        cost: 625,
+      },
+    ],
+  },
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+  shower_remodel: {
+    label: "Shower Remodel",
+    items: [
+      {
+        id: "toilet",
+        label: "Toilet",
+        cost: 450,
+      },
+      {
+        id: "framing_and_cement_board",
+        label: "Framing & Cement Board",
+        cost: 600,
+      },
+      {
+        id: "ceramic_tile",
+        label: "Ceramic Tile",
+        cost: 300,
+      },
+      {
+        id: "porcelain_tile",
+        label: "Porcelain Tile",
+        cost: 300,
+      },
+      {
+        id: "marble_tile",
+        label: "Marble Tile",
+        cost: 375,
+      },
+    ],
+  },
+};
+
+export default materialsRules;
