@@ -7,7 +7,7 @@ export default function AffiliateSection() {
   return (
     <section className="flex flex-col gap-3">
       <Button variant="affiliate" href={LOWES_LINK}>
-        Shop at Lowe's
+        Shop at Lowe&apos;s
       </Button>
 
       <Button variant="affiliate" href={FLOOR_DECOR_LINK}>
