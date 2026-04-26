@@ -101,7 +101,7 @@ export default function PDFButton({
     }
 
     // ── Title ─────────────────────────────────────────
-    addTitle("RenovaIQ — Bathroom Remodel Estimate");
+    addTitle("Bathroom Remodel Estimate");
 
     // ── Section 1: Project Details ────────────────────
     addSectionHeader("Project Details");
@@ -176,7 +176,7 @@ export default function PDFButton({
     });
 
     // ── Save ──────────────────────────────────────────
-    doc.save("renovaiq-estimate.pdf");
+   doc.save("bathroom-remodel-estimate-usa.pdf");
   }
 
   return (
