@@ -82,19 +82,19 @@ export default function CTAForm({ estimate, onCancel = () => {} }) {
 
         {/* Persuasive Text */}
         <div className="flex flex-col gap-3">
-          <h3 className="text-base font-bold text-gray-900 leading-snug">
+          <h3 className="text-center text-base font-bold text-gray-900 leading-snug">
             Ready to Move Forward?
           </h3>
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-justify text-sm text-gray-600 leading-relaxed">
             Most homeowners spend more than they planned — not because of bad
             luck, but because they hired the wrong contractor.
           </p>
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-justify text-sm text-gray-600 leading-relaxed">
             We work with licensed, insured professionals with 5+ years of
             verified experience. Before you sign anything, let us connect you
             with someone you can trust.
           </p>
-          <p className="text-sm font-semibold text-gray-900">
+          <p className="text-center text-sm font-semibold text-gray-900">
             Drop your info below. We&apos;ll do the rest.
           </p>
         </div>

@@ -30,11 +30,11 @@ export default function CalculadoraClient() {
             Free Bathroom Remodel Estimate
           </span>
 
-          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h1 className="text-center mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Bathroom Remodel Cost Calculator
           </h1>
 
-          <p className="mt-4 text-base leading-7 text-gray-600 sm:text-lg">
+          <p className="text-justify mt-4 text-base leading-7 text-gray-600 sm:text-lg">
             Most homeowners underestimate remodel costs and end up paying more
             than expected. RenovaIQ helps you see a clearer breakdown of labor,
             materials, and hidden costs before you commit.
@@ -62,10 +62,10 @@ export default function CalculadoraClient() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 Built with real remodeling insight
               </h2>
-              <p className="mt-4 text-base leading-7 text-gray-600">
+              <p className="text-justify mt-4 text-base leading-7 text-gray-600">
                 This calculator was shaped with practical remodeling experience so
                 the estimate feels more realistic, structured, and useful in the
                 real world.
@@ -73,7 +73,7 @@ export default function CalculadoraClient() {
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold text-gray-900">
+              <p className="text-center text-sm font-semibold text-gray-900">
                 Thanks to{" "}
                 <a
                   href={SANABRIA_MAPS_LINK}
@@ -85,13 +85,13 @@ export default function CalculadoraClient() {
                 </a>
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="text-justify mt-2 text-sm leading-6 text-gray-600">
                 The calculator was supported by real field insight from Sanabria
                 Barrios Flooring Inc, active since 2016, helping shape the logic
                 behind labor and material estimation.
               </p>
 
-              <p className="mt-3 text-sm leading-6 text-gray-600">
+              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
                 Based on that experience, we also recommend comparing materials
                 and prices from trusted suppliers before making final decisions.
               </p>
@@ -104,10 +104,10 @@ export default function CalculadoraClient() {
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
               Helpful places to shop for your remodel
             </h2>
-            <p className="mt-4 text-base leading-7 text-gray-600">
+            <p className="text-justify mt-4 text-base leading-7 text-gray-600">
               Use trusted stores for your remodel materials. The price you pay
               does not change if you click through our links, and those visits
               help support and maintain the site at no extra cost to you.

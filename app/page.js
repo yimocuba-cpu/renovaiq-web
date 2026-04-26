@@ -28,10 +28,10 @@ export default function HomePage() {
             </span>
 
             <div className="flex flex-col gap-4">
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+              <h1 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
                 Calculate Your Bathroom Remodel Cost in Seconds
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
+              <p className="text-justify max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
                 Most homeowners start with a guess and end up paying for surprises.
                 RenovaIQ gives you a clearer breakdown before you hire anyone, buy
                 materials, or sign a contract.
@@ -85,10 +85,10 @@ export default function HomePage() {
       <section className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
               Why homeowners need a clearer estimate first
             </h2>
-            <p className="mt-4 text-base leading-7 text-gray-600">
+            <p className="text-justify mt-4 text-base leading-7 text-gray-600">
               Bathroom projects often get expensive because the first number sounds
               simple, but the final bill is not. Labor changes, materials shift, and
               hidden issues show up later. RenovaIQ helps you see the structure
@@ -127,10 +127,10 @@ export default function HomePage() {
       {/* AFILIADOS */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
             Helpful places to shop for your remodel
           </h2>
-          <p className="mt-4 text-base leading-7 text-gray-600">
+          <p className="text-justify mt-4 text-base leading-7 text-gray-600">
             Use trusted stores for your remodel materials. The price you pay does not
             change if you click through our links, and those visits help support and
             maintain the site at no extra cost to you.
@@ -200,17 +200,17 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 Built with real remodeling insight
               </h2>
-              <p className="mt-4 text-base leading-7 text-gray-600">
+              <p className="text-justify mt-4 text-base leading-7 text-gray-600">
                 This tool was shaped with practical remodeling experience so the estimate
                 feels useful, clear, and grounded in real-world work.
               </p>
             </div>
 
             <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-              <p className="text-sm font-semibold text-gray-900">
+              <p className="text-center text-sm font-semibold text-gray-900">
                 Thanks to{" "}
                 <a
                   href="https://maps.app.goo.gl/DtmugzjZAvhSxRK39?g_st=aw"
@@ -221,11 +221,11 @@ export default function HomePage() {
                   Sanabria Barrios Flooring Inc
                 </a>
               </p>
-              <p className="mt-2 text-sm leading-6 text-gray-600">
+              <p className="text-justify mt-2 text-sm leading-6 text-gray-600">
                 The information and workflow behind this tool were supported by Sanabria
                 Barrios Flooring Inc.
               </p>
-              <p className="mt-3 text-sm leading-6 text-gray-600">
+              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
                 They also recommend comparing materials and prices from trusted suppliers
                 like Lowe&apos;s and Floor &amp; Decor before making final decisions.
               </p>
@@ -237,10 +237,10 @@ export default function HomePage() {
       {/* CÓMO FUNCIONA */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
             How it works
           </h2>
-          <p className="mt-4 text-base leading-7 text-gray-600">
+          <p className="text-center mt-4 text-base leading-7 text-gray-600">
             Simple, fast, and built for mobile.
           </p>
         </div>
@@ -288,10 +288,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gray-900 px-6 py-10 text-white shadow-sm sm:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
               Ready for a clearer estimate?
             </h2>
-            <p className="mt-4 text-base leading-7 text-gray-300">
+            <p className="text-justify mt-4 text-base leading-7 text-gray-300">
               Get a better idea of your bathroom remodel cost before you hire anyone.
             </p>
           </div>

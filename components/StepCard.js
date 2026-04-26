@@ -17,7 +17,7 @@ export default function StepCard({ stepNumber, title, hint, children }) {
         </span>
       </div>
 
-      <h2 id={titleId} className="text-base font-semibold text-gray-900 leading-snug">
+      <h2 id={titleId} className="text-center text-base font-semibold text-gray-900 leading-snug">
         {title}
       </h2>
 
