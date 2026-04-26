@@ -20,8 +20,8 @@ export default function HomePage() {
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
             <span className="inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-blue-700">
               Free Bathroom Remodel Estimate
@@ -83,7 +83,7 @@ export default function HomePage() {
 
       {/* POR QUÉ EXISTE */}
       <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
               Why homeowners need a clearer estimate first
@@ -96,7 +96,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
             <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
               <p className="text-sm font-semibold text-gray-900">No guesswork</p>
               <p className="mt-2 text-sm leading-6 text-gray-600">
@@ -125,7 +125,7 @@ export default function HomePage() {
       </section>
 
       {/* AFILIADOS */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
             Helpful places to shop for your remodel
@@ -137,7 +137,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
           <article className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
               Materials source
@@ -151,7 +151,7 @@ export default function HomePage() {
             <p className="mt-3 text-xs text-gray-500">
               The price you pay does not change. This helps support and maintain the site.
             </p>
-            <div className="mt-5">
+            <div className="mt-4">
               <Button
                 variant="affiliate"
                 href={LOWES_LINK}
@@ -177,7 +177,7 @@ export default function HomePage() {
             <p className="mt-3 text-xs text-gray-500">
               No extra cost to you. These visits help keep the tool running.
             </p>
-            <div className="mt-5">
+            <div className="mt-4">
               <Button
                 variant="affiliate"
                 href={FLOOR_DECOR_LINK}
@@ -189,7 +189,7 @@ export default function HomePage() {
           </article>
         </div>
 
-        <p className="mt-4 text-xs text-gray-500">
+        <p className="mt-3 text-xs text-gray-500">
           We may earn a commission if you buy through these links, at no extra cost to
           you.
         </p>
@@ -197,7 +197,7 @@ export default function HomePage() {
 
       {/* CONFIANZA / COLABORADOR */}
       <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
             <div>
               <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
@@ -235,7 +235,7 @@ export default function HomePage() {
       </section>
 
       {/* CÓMO FUNCIONA */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
             How it works
@@ -245,7 +245,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
             <p className="text-xs font-bold uppercase tracking-widest text-blue-700">
               Step 1
@@ -285,7 +285,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gray-900 px-6 py-10 text-white shadow-sm sm:px-8">
           <div className="max-w-2xl">
             <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">

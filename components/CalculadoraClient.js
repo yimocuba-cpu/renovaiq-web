@@ -24,7 +24,7 @@ export default function CalculadoraClient() {
       </nav>
 
       {/* INTRO */}
-      <section className="mx-auto max-w-6xl px-4 pt-12 pb-8 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <span className="inline-flex w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-blue-700">
             Free Bathroom Remodel Estimate
@@ -47,7 +47,7 @@ export default function CalculadoraClient() {
       </section>
 
       {/* WIZARD */}
-      <section className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-6">
           <p className="text-sm text-gray-500">
             Takes less than 60 seconds. No signup required.
@@ -59,8 +59,8 @@ export default function CalculadoraClient() {
 
       {/* COLLABORATOR / TRUST */}
       <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
             <div>
               <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 Built with real remodeling insight
@@ -102,7 +102,7 @@ export default function CalculadoraClient() {
 
       {/* AFILIADOS — SOLO AL FINAL */}
       <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
               Helpful places to shop for your remodel
@@ -114,7 +114,7 @@ export default function CalculadoraClient() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
             <article className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
                 Materials source
@@ -131,7 +131,7 @@ export default function CalculadoraClient() {
                 The price you pay does not change. This helps support and
                 maintain the site.
               </p>
-              <div className="mt-5">
+              <div className="mt-4">
                 <Button
                   variant="affiliate"
                   href={LOWES_LINK}
@@ -157,7 +157,7 @@ export default function CalculadoraClient() {
               <p className="mt-3 text-xs text-gray-500">
                 No extra cost to you. These visits help keep the tool running.
               </p>
-              <div className="mt-5">
+              <div className="mt-4">
                 <Button
                   variant="affiliate"
                   href={FLOOR_DECOR_LINK}
@@ -169,7 +169,7 @@ export default function CalculadoraClient() {
             </article>
           </div>
 
-          <p className="mt-4 text-xs text-gray-500">
+          <p className="mt-3 text-xs text-gray-500">
             We may earn a commission if you buy through these links, at no extra
             cost to you.
           </p>

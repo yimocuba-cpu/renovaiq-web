@@ -146,7 +146,7 @@ export default function Wizard() {
   const materialesActuales = bathType ? materialsRules[bathType]?.items || [] : [];
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {/* BLOQUE 1: LABOR */}
       <StepCard
         stepNumber={1}
