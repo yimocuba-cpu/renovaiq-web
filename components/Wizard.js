@@ -12,7 +12,6 @@ import ResultCard from "./ResultCard";
 import HiddenCosts from "./HiddenCosts";
 import PDFButton from "./PDFButton";
 import CTAForm from "./CTAForm";
-import AffiliateSection from "./AffiliateSection";
 import Button from "./Button";
 
 const TILE_TYPES = [
@@ -364,8 +363,6 @@ export default function Wizard() {
               onCancel={() => setShowLeadForm(false)}
             />
           )}
-
-          <AffiliateSection />
         </div>
       )}
     </div>

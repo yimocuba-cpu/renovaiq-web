@@ -3,12 +3,13 @@ import CalculadoraClient from "../../components/CalculadoraClient";
 export const metadata = {
   title: "Bathroom Remodel Cost Calculator | RenovaIQ",
   description:
-    "Use our free bathroom remodel calculator to estimate labor, materials, and hidden costs across the U.S. No signup required.",
+    "Use RenovaIQ to estimate bathroom remodel costs across the U.S. with a clear breakdown of labor, materials, and hidden costs. Free, fast, and no signup required.",
   keywords: [
     "bathroom remodel calculator",
     "bathroom renovation cost estimator",
     "bathroom cost USA",
     "remodel cost breakdown",
+    "free bathroom remodel estimate",
   ],
 };
 
