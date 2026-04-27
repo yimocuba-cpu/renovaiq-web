@@ -213,7 +213,7 @@ export default function HomePage() {
               <p className="text-center text-sm font-semibold text-gray-900">
                 Thanks to{" "}
                 <a
-                  href="https://maps.app.goo.gl/DtmugzjZAvhSxRK39?g_st=aw"
+                  href="https://www.google.com/maps/place/Sanabria+Barrios+Flooring+Inc/data=!4m2!3m1!1s0x65b7c928e8114c4f:0xdf4de619ff1eb4a9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-700 hover:underline"

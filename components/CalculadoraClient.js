@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const LOWES_LINK = "PASTE_LOWES_AFFILIATE_LINK_HERE";
 const FLOOR_DECOR_LINK = "PASTE_FLOOR_DECOR_AFFILIATE_LINK_HERE";
-const SANABRIA_MAPS_LINK = "https://maps.app.goo.gl/DtmugzjZAvhSxRK39?g_st=aw";
+const SANABRIA_MAPS_LINK = "https://www.google.com/maps/place/Sanabria+Barrios+Flooring+Inc/data=!4m2!3m1!1s0x65b7c928e8114c4f:0xdf4de619ff1eb4a9";
 
 export default function CalculadoraClient() {
   return (
