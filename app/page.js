@@ -222,12 +222,16 @@ export default function HomePage() {
                 </a>
               </p>
               <p className="text-justify mt-2 text-sm leading-6 text-gray-600">
-                The information and workflow behind this tool were supported by Sanabria
-                Barrios Flooring Inc.
+                The calculator is built on the real-world experience of Sanabria Barrios Flooring Inc., a company active since 2016 and serving Tampa and surrounding areas. Their hands-on work in residential remodeling helped shape a clearer estimation logic, aligned with actual labor and material costs.
               </p>
               <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
-                They also recommend comparing materials and prices from trusted suppliers
-                like Lowe&apos;s and Floor &amp; Decor before making final decisions.
+                They specialize in flooring, bathroom, staircase, kitchen, and backsplash remodeling, delivering projects with a strong focus on quality, detail, and efficient execution tailored to each client’s needs.
+              </p>
+              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
+                The company has been officially registered since 2016 with the Florida Division of Corporations (Registration No. P16000023654) and is listed with Dun & Bradstreet under D-U-N-S Number 03-550-0949, reinforcing its credibility and formal presence in the market.
+              </p>
+              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
+                Based on this real experience, we also recommend comparing materials and pricing from trusted suppliers before making final decisions, helping achieve the right balance between cost and quality.
               </p>
             </div>
           </div>
