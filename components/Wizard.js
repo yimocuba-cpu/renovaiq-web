@@ -14,17 +14,6 @@ import PDFButton from "./PDFButton";
 import CTAForm from "./CTAForm";
 import Button from "./Button";
 
-const TILE_TYPES = [
-  { id: "ceramic", label: "Ceramic Tile" },
-  { id: "porcelain", label: "Porcelain Tile" },
-  { id: "marble", label: "Marble Tile" },
-];
-
-const BATH_SIZES = [
-  { id: "medium", label: "Medium" },
-  { id: "extra_large", label: "Extra Large" },
-];
-
 export default function Wizard() {
   const [zipCode, setZipCode] = useState("");
   const [bathType, setBathType] = useState("");
@@ -92,6 +81,17 @@ export default function Wizard() {
       nuevosErrores.materials = "Please select at least one material.";
     }
 
+    if (!tileType) {
+      nuevosErrores.tileType = "Please select a tile type.";
+    }
+
+    if (
+      (bathType === "master_bathroom" || bathType === "guest_bathroom") &&
+      !bathroomSize
+    ) {
+      nuevosErrores.bathroomSize = "Please select a bathroom size.";
+    }
+
     if (Object.keys(nuevosErrores).length > 0) {
       setErrores(nuevosErrores);
       return;
@@ -105,7 +105,12 @@ export default function Wizard() {
       return;
     }
 
-    const materialsResult = calculateMaterials(bathType, selectedMaterials);
+    const materialsResult = calculateMaterials(
+      bathType,
+      selectedMaterials,
+      tileType,
+      bathroomSize
+    );
     if (materialsResult.error) {
       setErrores({ general: materialsResult.error });
       return;
@@ -117,6 +122,13 @@ export default function Wizard() {
       materialsResult.materialsTotal
     );
 
+    // Labels para PDF y resultado
+    const bathData = materialsRules[bathType];
+    const tileLabel = bathData.tileTypes.find((t) => t.id === tileType)?.label || "";
+    const sizeLabel = bathData.bathroomSizes
+      ? bathData.bathroomSizes.find((s) => s.id === bathroomSize)?.label || ""
+      : "";
+
     setResultado({
       ...total,
       laborLow: laborResult.laborLow,
@@ -125,13 +137,13 @@ export default function Wizard() {
       selectedTasks: laborBaseRates[bathType].tasks
         .filter((task) => selectedTasks.includes(task.id))
         .map((task) => task.label),
-      selectedMaterials: materialsRules[bathType].items
+      selectedMaterials: bathData.items
         .filter((material) => selectedMaterials.includes(material.id))
         .map((material) => material.label),
-      tileTypeLabel: TILE_TYPES.find((tile) => tile.id === tileType)?.label || "",
-      bathroomSizeLabel:
-        BATH_SIZES.find((size) => size.id === bathroomSize)?.label || "",
-      bathTypeLabel: bathTypes.find((bathroom) => bathroom.id === bathType)?.label || "",
+      tileTypeLabel: tileLabel,
+      bathroomSizeLabel: sizeLabel,
+      bathTypeLabel:
+        bathTypes.find((bathroom) => bathroom.id === bathType)?.label || "",
       zipCode,
     });
 
@@ -144,6 +156,8 @@ export default function Wizard() {
 
   const tareasActuales = bathType ? laborBaseRates[bathType]?.tasks || [] : [];
   const materialesActuales = bathType ? materialsRules[bathType]?.items || [] : [];
+  const tileTypes = bathType ? materialsRules[bathType]?.tileTypes || [] : [];
+  const bathroomSizes = bathType ? materialsRules[bathType]?.bathroomSizes || [] : [];
 
   return (
     <div className="flex flex-col gap-4">
@@ -171,7 +185,9 @@ export default function Wizard() {
                   : "border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
               }`}
           />
-          {errores.zipCode && <p className="text-xs text-red-500">{errores.zipCode}</p>}
+          {errores.zipCode && (
+            <p className="text-xs text-red-500">{errores.zipCode}</p>
+          )}
         </div>
 
         <div className="flex flex-col gap-1">
@@ -195,7 +211,9 @@ export default function Wizard() {
               </option>
             ))}
           </select>
-          {errores.bathType && <p className="text-xs text-red-500">{errores.bathType}</p>}
+          {errores.bathType && (
+            <p className="text-xs text-red-500">{errores.bathType}</p>
+          )}
         </div>
 
         {bathType && (
@@ -203,8 +221,9 @@ export default function Wizard() {
             <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
               Select the work you need <span className="text-red-500">*</span>
             </label>
-            {errores.tasks && <p className="text-xs text-red-500">{errores.tasks}</p>}
-
+            {errores.tasks && (
+              <p className="text-xs text-red-500">{errores.tasks}</p>
+            )}
             {tareasActuales.map((task) => (
               <label
                 key={task.id}
@@ -225,7 +244,9 @@ export default function Wizard() {
                 />
                 <span
                   className={`text-sm font-medium ${
-                    task.conditional === "pre1980" ? "text-amber-700" : "text-gray-900"
+                    task.conditional === "pre1980"
+                      ? "text-amber-700"
+                      : "text-gray-900"
                   }`}
                 >
                   {task.label}
@@ -248,12 +269,14 @@ export default function Wizard() {
           title="Materials"
           hint="Select the materials you plan to include in your remodel."
         >
+          {/* CHECKLIST */}
           <div className="flex flex-col gap-2">
             <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
               Select your materials <span className="text-red-500">*</span>
             </label>
-            {errores.materials && <p className="text-xs text-red-500">{errores.materials}</p>}
-
+            {errores.materials && (
+              <p className="text-xs text-red-500">{errores.materials}</p>
+            )}
             {materialesActuales.map((item) => (
               <label
                 key={item.id}
@@ -270,22 +293,33 @@ export default function Wizard() {
                   onChange={() => toggleMaterial(item.id)}
                   className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                 />
-                <span className="text-sm font-medium text-gray-900">{item.label}</span>
+                <span className="text-sm font-medium text-gray-900">
+                  {item.label}
+                </span>
               </label>
             ))}
           </div>
 
+          {/* SELECTOR 1 — TILE TYPE (viene de materialsRules[bathType].tileTypes) */}
           <div className="flex flex-col gap-1">
             <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-              Tile Type <span className="text-gray-400 font-normal">(optional)</span>
+              Tile Type <span className="text-red-500">*</span>
             </label>
+            {errores.tileType && (
+              <p className="text-xs text-red-500">{errores.tileType}</p>
+            )}
             <select
               value={tileType}
               onChange={(e) => setTileType(e.target.value)}
-              className="border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:border-[#1D4ED8] focus:ring-1 focus:ring-[#1D4ED8] transition appearance-none"
+              className={`border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
+                ${
+                  errores.tileType
+                    ? "border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                }`}
             >
               <option value="">— Select tile type —</option>
-              {TILE_TYPES.map((tile) => (
+              {tileTypes.map((tile) => (
                 <option key={tile.id} value={tile.id}>
                   {tile.label}
                 </option>
@@ -293,18 +327,27 @@ export default function Wizard() {
             </select>
           </div>
 
-          {bathType === "master_bathroom" && (
+          {/* SELECTOR 2 — BATHROOM SIZE (solo master y guest) */}
+          {(bathType === "master_bathroom" || bathType === "guest_bathroom") && (
             <div className="flex flex-col gap-1">
               <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-                Bathroom Size <span className="text-gray-400 font-normal">(optional)</span>
+                Bathroom Size <span className="text-red-500">*</span>
               </label>
+              {errores.bathroomSize && (
+                <p className="text-xs text-red-500">{errores.bathroomSize}</p>
+              )}
               <select
                 value={bathroomSize}
                 onChange={(e) => setBathroomSize(e.target.value)}
-                className="border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:border-[#1D4ED8] focus:ring-1 focus:ring-[#1D4ED8] transition appearance-none"
+                className={`border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
+                  ${
+                    errores.bathroomSize
+                      ? "border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                  }`}
               >
                 <option value="">— Select size —</option>
-                {BATH_SIZES.map((size) => (
+                {bathroomSizes.map((size) => (
                   <option key={size.id} value={size.id}>
                     {size.label}
                   </option>
