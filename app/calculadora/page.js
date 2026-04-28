@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function CalculadoraPage() {
   return (
-    <main className="bg-white text-gray-900">
+    <main className="bg-slate-50 text-slate-900">
       <CalculadoraClient />
     </main>
   );
