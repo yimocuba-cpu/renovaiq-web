@@ -1,15 +1,16 @@
 import Button from "../components/Button";
 
 export const metadata = {
-  title: "RenovaIQ | Bathroom Remodel Cost Calculator for U.S. Homeowners",
+  title: "Bathroom Remodel Cost Calculator | Instant Estimates | RenovaIQ",
   description:
-    "Estimate bathroom remodel costs across the U.S. with a clear breakdown of labor, materials, and hidden costs. Free, fast, and no signup required.",
+    "Free bathroom remodel cost calculator for USA homeowners. Get instant estimates with labor, materials, and hidden costs breakdown. No signup required. See real pricing before hiring.",
   keywords: [
     "bathroom remodel cost calculator",
-    "bathroom renovation estimate",
-    "bathroom remodel cost USA",
-    "free bathroom remodel estimate",
-    "bathroom cost calculator",
+    "bathroom renovation cost estimate",
+    "how much does a bathroom remodel cost",
+    "bathroom remodeling cost USA",
+    "free bathroom estimate tool",
+    "bathroom renovation price calculator",
   ],
 };
 

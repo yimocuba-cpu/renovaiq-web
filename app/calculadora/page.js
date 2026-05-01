@@ -1,15 +1,16 @@
 import CalculadoraClient from "../../components/CalculadoraClient";
 
 export const metadata = {
-  title: "Bathroom Remodel Cost Calculator | RenovaIQ",
+  title: "Bathroom Remodel Cost Estimator | Labor & Materials Breakdown | RenovaIQ",
   description:
-    "Use RenovaIQ to estimate bathroom remodel costs across the U.S. with a clear breakdown of labor, materials, and hidden costs. Free, fast, and no signup required.",
+    "Get detailed bathroom remodel cost estimates instantly. See labor costs, materials, and hidden expenses separated. Free calculator for all USA zip codes. Perfect for budget planning before hiring contractors.",
   keywords: [
-    "bathroom remodel calculator",
-    "bathroom renovation cost estimator",
-    "bathroom cost USA",
-    "remodel cost breakdown",
-    "free bathroom remodel estimate",
+    "bathroom remodel cost estimator",
+    "bathroom renovation cost calculator",
+    "labor and materials cost breakdown",
+    "bathroom remodeling expenses USA",
+    "renovation budget planner",
+    "bathroom cost by zip code",
   ],
 };
 
