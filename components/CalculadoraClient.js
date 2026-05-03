@@ -2,6 +2,7 @@
 
 import Wizard from "./Wizard";
 import Button from "./Button";
+import Navbar from "./Navbar";
 
 const LOWES_LINK = "PASTE_LOWES_AFFILIATE_LINK_HERE";
 const FLOOR_DECOR_LINK = "PASTE_FLOOR_DECOR_AFFILIATE_LINK_HERE";
@@ -11,34 +12,7 @@ export default function CalculadoraClient() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
       {/* TOP NAV */}
-      <nav className="w-full border-b border-slate-800 bg-slate-900 shadow-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <span className="text-lg font-semibold tracking-wide text-white">
-            RenovaIQ
-          </span>
-
-          <a
-            href="/"
-            className="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-700 bg-slate-800 text-cyan-300 hover:bg-slate-700 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-            aria-label="Go to home"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              />
-            </svg>
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* INTRO */}
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
