@@ -20,7 +20,7 @@ export default function BathroomRemodeling() {
     <main className="bg-slate-50 text-slate-900">
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         {/* HEADER */}
-        <header className="mb-16 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+        <header className="mb-16 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm text-center">
           <div className="inline-flex rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-700">
             Bathroom Remodel Cost Guide
           </div>
@@ -51,7 +51,7 @@ export default function BathroomRemodeling() {
 
         {/* AVERAGE COST */}
         <section className="mb-16 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-6 leading-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-6 leading-tight text-center mx-auto max-w-2xl">
             Average Bathroom Remodel Cost in the USA
           </h2>
           <p className="text-base leading-8 text-slate-700 sm:text-lg">
@@ -85,17 +85,19 @@ export default function BathroomRemodeling() {
             Master bathrooms usually cost more than guest bathrooms. Shower-only updates cost less than
             a full bath redo. ZIP code and local labor rates can shift the outcome significantly.
           </p>
-          <div className="mt-8 pt-8 border-t border-slate-100">
+          <div className="mt-8 pt-8 border-t border-slate-100 text-center">
             <p className="text-sm text-slate-600 mb-3">
               Want a more precise range for your bathroom and ZIP code?
             </p>
-            <Button
-              href="/calculadora"
-              variant="primary"
-              ariaLabel="Get estimate for bathroom remodel"
-            >
-              Get an Estimate by ZIP Code
-            </Button>
+            <div className="mx-auto max-w-xs">
+              <Button
+                href="/calculadora"
+                variant="primary"
+                ariaLabel="Get estimate for bathroom remodel"
+              >
+                Get an Estimate by ZIP Code
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -136,7 +138,7 @@ export default function BathroomRemodeling() {
 
         {/* HIDDEN COSTS */}
         <section className="mb-16 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-6 leading-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-8 leading-tight text-center mx-auto max-w-2xl">
             Hidden Costs That Surprise Homeowners
           </h2>
           <p className="text-base leading-8 text-slate-700 sm:text-lg">
@@ -285,7 +287,7 @@ export default function BathroomRemodeling() {
 
         {/* FACTORS THAT CHANGE PRICE */}
         <section className="mb-16 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-8 leading-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-8 leading-tight text-center mx-auto max-w-2xl">
             Factors That Change Your Bathroom Remodel Cost
           </h2>
           <p className="text-base leading-8 text-slate-700 sm:text-lg">
@@ -333,7 +335,7 @@ export default function BathroomRemodeling() {
 
         {/* HOW RENOVAIQ HELPS */}
         <section className="mb-16 rounded-[2rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-8 leading-tight">
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 mb-8 leading-tight text-center mx-auto max-w-2xl">
             How to Estimate Your Bathroom Remodel More Accurately
           </h2>
           <p className="text-base leading-8 text-slate-700 sm:text-lg">
@@ -361,37 +363,41 @@ export default function BathroomRemodeling() {
             RenovaIQ automates this by letting you pick bathroom type, labor tasks, materials, and ZIP code.
             The calculator shows labor, materials, and hidden costs separately before you talk to anyone.
           </p>
-          <div className="mt-8 pt-8 border-t border-slate-100">
+          <div className="mt-8 pt-8 border-t border-slate-100 text-center">
             <p className="text-sm text-slate-600 mb-3">
               Ready to see a breakdown of your costs?
             </p>
-            <Button
-              href="/calculadora"
-              variant="primary"
-              ariaLabel="Start bathroom remodel calculator"
-            >
-              Try the Calculator Now
-            </Button>
+            <div className="mx-auto max-w-xs">
+              <Button
+                href="/calculadora"
+                variant="primary"
+                ariaLabel="Start bathroom remodel calculator"
+              >
+                Try the Calculator Now
+              </Button>
+            </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="my-16 rounded-[2rem] border border-slate-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 sm:p-12 shadow-sm">
-          <h3 className="text-2xl font-semibold text-slate-900 leading-tight">
+          <section className="my-16 rounded-[2rem] border border-slate-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 sm:p-12 shadow-sm text-center">
+          <h3 className="text-2xl font-semibold text-slate-900 leading-tight mx-auto max-w-2xl">
             Get a clearer estimate for your project
           </h3>
           <p className="mt-5 text-base leading-8 text-slate-700 sm:text-lg">
             RenovaIQ shows you a breakdown of labor, materials, and hidden costs for your
             specific bathroom type and location. No signup. Free. Takes 2 minutes.
           </p>
-          <div className="mt-8">
-            <Button
-              href="/calculadora"
-              variant="primary"
-              ariaLabel="Use the bathroom remodel calculator"
-            >
-              Use the Calculator
-            </Button>
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-xs">
+              <Button
+                href="/calculadora"
+                variant="primary"
+                ariaLabel="Use the bathroom remodel calculator"
+              >
+                Use the Calculator
+              </Button>
+            </div>
           </div>
         </section>
 
