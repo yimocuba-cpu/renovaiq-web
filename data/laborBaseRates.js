@@ -5,7 +5,7 @@ const laborBaseRates = {
       {
         id: "demolition",
         label: "Demolition",
-        cost: 700,
+        cost: 600,
       },
       {
         id: "debris_removal_disposal",
@@ -15,12 +15,12 @@ const laborBaseRates = {
       {
         id: "wall_texture_paint",
         label: "Wall Texture & Paint",
-        cost: 1200,
+        cost: 1100,
       },
       {
         id: "vanity_cabinet_installation",
         label: "Vanity Cabinet Installation",
-        cost: 1300,
+        cost: 1100,
       },
       {
         id: "bathtub_installation",
@@ -35,12 +35,12 @@ const laborBaseRates = {
       {
         id: "full_wall_tile_installation",
         label: "Full Wall Tile Installation",
-        cost: 8500,
+        cost: 8300,
       },
       {
         id: "partial_wall_tile_installation",
         label: "Partial Wall Tile Installation",
-        cost: 5500,
+        cost: 5300,
       },
       {
         id: "floor_tile_installation_large",
@@ -98,12 +98,12 @@ const laborBaseRates = {
       {
         id: "full_wall_tile_installation",
         label: "Full Wall Tile Installation",
-        cost: 5000,
+        cost: 4650,
       },
       {
         id: "partial_wall_tile_installation",
         label: "Partial Wall Tile Installation",
-        cost: 3700,
+        cost: 3500,
       },
       {
         id: "floor_tile_installation",
