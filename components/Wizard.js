@@ -24,6 +24,8 @@ export default function Wizard() {
   const [resultado, setResultado] = useState(null);
   const [errores, setErrores] = useState({});
   const [showLeadForm, setShowLeadForm] = useState(false);
+  const [wallTileTask, setWallTileTask] = useState("");
+  const [floorTileTask, setFloorTileTask] = useState("");
 
   function handleBathTypeChange(value) {
     setBathType(value);
@@ -34,6 +36,8 @@ export default function Wizard() {
     setResultado(null);
     setErrores({});
     setShowLeadForm(false);
+    setWallTileTask("");
+    setFloorTileTask("");
   }
 
   function toggleTask(id) {
@@ -60,6 +64,8 @@ export default function Wizard() {
     setResultado(null);
     setErrores({});
     setShowLeadForm(false);
+    setWallTileTask("");
+    setFloorTileTask("");
   }
 
   function handleCalculate() {
@@ -224,40 +230,270 @@ export default function Wizard() {
             {errores.tasks && (
               <p className="text-xs text-red-500">{errores.tasks}</p>
             )}
-            {tareasActuales.map((task) => (
-              <label
-                key={task.id}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
-                  ${
-                    task.conditional === "pre1980"
-                      ? "border-dashed border-amber-400 bg-amber-50"
-                      : selectedTasks.includes(task.id)
-                        ? "border-[#1D4ED8] bg-[#EFF6FF]"
-                        : "border-gray-200 hover:border-[#1D4ED8] hover:bg-[#EFF6FF]"
-                  }`}
-              >
-                <input
-                  type="checkbox"
-                  checked={selectedTasks.includes(task.id)}
-                  onChange={() => toggleTask(task.id)}
-                  className="w-4 h-4 accent-[#1D4ED8] shrink-0"
-                />
-                <span
-                  className={`text-sm font-medium ${
-                    task.conditional === "pre1980"
-                      ? "text-amber-700"
-                      : "text-gray-900"
-                  }`}
-                >
-                  {task.label}
-                </span>
-                {task.conditional === "pre1980" && (
-                  <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
-                    Pre-1980
-                  </span>
-                )}
-              </label>
-            ))}
+
+            {/* MASTER BATHROOM */}
+            {bathType === "master_bathroom" && (
+              <>
+                {/* Checkboxes normales (excluyendo wall tile, floor tile y pre-1980) */}
+                {tareasActuales
+                  .filter(
+                    (task) =>
+                      ![
+                        "full_wall_tile_installation",
+                        "partial_wall_tile_installation",
+                        "floor_tile_installation_large",
+                        "floor_tile_installation_medium",
+                        "pre_1980_wall_preparation",
+                      ].includes(task.id)
+                  )
+                  .map((task) => (
+                    <label
+                      key={task.id}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                        ${
+                          selectedTasks.includes(task.id)
+                            ? "border-[#1D4ED8] bg-[#EFF6FF]"
+                            : "border-gray-200 hover:border-[#1D4ED8] hover:bg-[#EFF6FF]"
+                        }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedTasks.includes(task.id)}
+                        onChange={() => toggleTask(task.id)}
+                        className="w-4 h-4 accent-[#1D4ED8] shrink-0"
+                      />
+                      <span className="text-sm font-medium text-gray-900">
+                        {task.label}
+                      </span>
+                    </label>
+                  ))}
+
+                {/* Checkbox Pre-1980 */}
+                {tareasActuales
+                  .filter((task) => task.conditional === "pre1980")
+                  .map((task) => (
+                    <label
+                      key={task.id}
+                      className="flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedTasks.includes(task.id)}
+                        onChange={() => toggleTask(task.id)}
+                        className="w-4 h-4 accent-[#1D4ED8] shrink-0"
+                      />
+                      <span className="text-sm font-medium text-amber-700">
+                        {task.label}
+                      </span>
+                      <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
+                        Pre-1980
+                      </span>
+                    </label>
+                  ))}
+
+                {/* Dropdown Wall Tile Scope */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                    Wall Tile Scope
+                  </label>
+                  <select
+                    value={wallTileTask}
+                    onChange={(e) => {
+                      const newValue = e.target.value;
+                      setWallTileTask(newValue);
+                      setSelectedTasks((prev) => {
+                        let updated = prev.filter(
+                          (id) =>
+                            id !== "full_wall_tile_installation" &&
+                            id !== "partial_wall_tile_installation"
+                        );
+                        if (newValue) {
+                          updated = [...updated, newValue];
+                        }
+                        return updated;
+                      });
+                    }}
+                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                  >
+                    <option value="">— Select wall tile scope —</option>
+                    <option value="full_wall_tile_installation">
+                      Full Wall Tile Installation
+                    </option>
+                    <option value="partial_wall_tile_installation">
+                      Partial Wall Tile Installation
+                    </option>
+                  </select>
+                </div>
+
+                {/* Dropdown Floor Tile Coverage */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                    Floor Tile Coverage
+                  </label>
+                  <select
+                    value={floorTileTask}
+                    onChange={(e) => {
+                      const newValue = e.target.value;
+                      setFloorTileTask(newValue);
+                      setSelectedTasks((prev) => {
+                        let updated = prev.filter(
+                          (id) =>
+                            id !== "floor_tile_installation_large" &&
+                            id !== "floor_tile_installation_medium"
+                        );
+                        if (newValue) {
+                          updated = [...updated, newValue];
+                        }
+                        return updated;
+                      });
+                    }}
+                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                  >
+                    <option value="">— Select floor tile coverage —</option>
+                    <option value="floor_tile_installation_large">
+                      Floor Tile Installation (Large Bathroom)
+                    </option>
+                    <option value="floor_tile_installation_medium">
+                      Floor Tile Installation (Medium Bathroom)
+                    </option>
+                  </select>
+                </div>
+              </>
+            )}
+
+            {/* GUEST BATHROOM */}
+            {bathType === "guest_bathroom" && (
+              <>
+                {/* Checkboxes normales (excluyendo wall tile y pre-1980, floor tile se queda) */}
+                {tareasActuales
+                  .filter(
+                    (task) =>
+                      ![
+                        "full_wall_tile_installation",
+                        "partial_wall_tile_installation",
+                        "pre_1980_wall_preparation",
+                      ].includes(task.id)
+                  )
+                  .map((task) => (
+                    <label
+                      key={task.id}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                        ${
+                          selectedTasks.includes(task.id)
+                            ? "border-[#1D4ED8] bg-[#EFF6FF]"
+                            : "border-gray-200 hover:border-[#1D4ED8] hover:bg-[#EFF6FF]"
+                        }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedTasks.includes(task.id)}
+                        onChange={() => toggleTask(task.id)}
+                        className="w-4 h-4 accent-[#1D4ED8] shrink-0"
+                      />
+                      <span className="text-sm font-medium text-gray-900">
+                        {task.label}
+                      </span>
+                    </label>
+                  ))}
+
+                {/* Checkbox Pre-1980 */}
+                {tareasActuales
+                  .filter((task) => task.conditional === "pre1980")
+                  .map((task) => (
+                    <label
+                      key={task.id}
+                      className="flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedTasks.includes(task.id)}
+                        onChange={() => toggleTask(task.id)}
+                        className="w-4 h-4 accent-[#1D4ED8] shrink-0"
+                      />
+                      <span className="text-sm font-medium text-amber-700">
+                        {task.label}
+                      </span>
+                      <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
+                        Pre-1980
+                      </span>
+                    </label>
+                  ))}
+
+                {/* Dropdown Wall Tile Scope */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                    Wall Tile Scope
+                  </label>
+                  <select
+                    value={wallTileTask}
+                    onChange={(e) => {
+                      const newValue = e.target.value;
+                      setWallTileTask(newValue);
+                      setSelectedTasks((prev) => {
+                        let updated = prev.filter(
+                          (id) =>
+                            id !== "full_wall_tile_installation" &&
+                            id !== "partial_wall_tile_installation"
+                        );
+                        if (newValue) {
+                          updated = [...updated, newValue];
+                        }
+                        return updated;
+                      });
+                    }}
+                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                  >
+                    <option value="">— Select wall tile scope —</option>
+                    <option value="full_wall_tile_installation">
+                      Full Wall Tile Installation
+                    </option>
+                    <option value="partial_wall_tile_installation">
+                      Partial Wall Tile Installation
+                    </option>
+                  </select>
+                </div>
+              </>
+            )}
+
+            {/* SHOWER REMODEL */}
+            {bathType === "shower_remodel" && (
+              <>
+                {tareasActuales.map((task) => (
+                  <label
+                    key={task.id}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                      ${
+                        task.conditional === "pre1980"
+                          ? "border-dashed border-amber-400 bg-amber-50"
+                          : selectedTasks.includes(task.id)
+                            ? "border-[#1D4ED8] bg-[#EFF6FF]"
+                            : "border-gray-200 hover:border-[#1D4ED8] hover:bg-[#EFF6FF]"
+                      }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedTasks.includes(task.id)}
+                      onChange={() => toggleTask(task.id)}
+                      className="w-4 h-4 accent-[#1D4ED8] shrink-0"
+                    />
+                    <span
+                      className={`text-sm font-medium ${
+                        task.conditional === "pre1980"
+                          ? "text-amber-700"
+                          : "text-gray-900"
+                      }`}
+                    >
+                      {task.label}
+                    </span>
+                    {task.conditional === "pre1980" && (
+                      <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
+                        Pre-1980
+                      </span>
+                    )}
+                  </label>
+                ))}
+              </>
+            )}
           </div>
         )}
       </StepCard>
