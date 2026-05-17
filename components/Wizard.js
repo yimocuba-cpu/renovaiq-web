@@ -166,7 +166,7 @@ export default function Wizard() {
   const bathroomSizes = bathType ? materialsRules[bathType]?.bathroomSizes || [] : [];
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full overflow-hidden">
       {/* BLOQUE 1: LABOR */}
       <StepCard
         stepNumber={1}
@@ -184,7 +184,7 @@ export default function Wizard() {
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value.replace(/\D/g, ""))}
             placeholder="e.g. 33601"
-            className={`border rounded-lg px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 transition
+            className={`w-full border rounded-lg px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 transition
               ${
                 errores.zipCode
                   ? "border-red-500 focus:ring-red-500"
@@ -203,7 +203,7 @@ export default function Wizard() {
           <select
             value={bathType}
             onChange={(e) => handleBathTypeChange(e.target.value)}
-            className={`border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
+            className={`w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
               ${
                 errores.bathType
                   ? "border-red-500 focus:ring-red-500"
@@ -249,7 +249,7 @@ export default function Wizard() {
                   .map((task) => (
                     <label
                       key={task.id}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                      className={`min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
                         ${
                           selectedTasks.includes(task.id)
                             ? "border-[#1D4ED8] bg-[#EFF6FF]"
@@ -262,7 +262,7 @@ export default function Wizard() {
                         onChange={() => toggleTask(task.id)}
                         className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                       />
-                      <span className="text-sm font-medium text-gray-900">
+                      <span className="min-w-0 break-words text-sm font-medium text-gray-900">
                         {task.label}
                       </span>
                     </label>
@@ -274,7 +274,7 @@ export default function Wizard() {
                   .map((task) => (
                     <label
                       key={task.id}
-                      className="flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
+                      className="min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
                     >
                       <input
                         type="checkbox"
@@ -282,10 +282,10 @@ export default function Wizard() {
                         onChange={() => toggleTask(task.id)}
                         className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                       />
-                      <span className="text-sm font-medium text-amber-700">
+                      <span className="min-w-0 break-words text-sm font-medium text-amber-700">
                         {task.label}
                       </span>
-                      <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
+                      <span className="ml-auto shrink-0 text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
                         Pre-1980
                       </span>
                     </label>
@@ -313,7 +313,7 @@ export default function Wizard() {
                         return updated;
                       });
                     }}
-                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                    className="w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
                   >
                     <option value="">— Select wall tile scope —</option>
                     <option value="full_wall_tile_installation">
@@ -347,7 +347,7 @@ export default function Wizard() {
                         return updated;
                       });
                     }}
-                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                    className="w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
                   >
                     <option value="">— Select floor tile coverage —</option>
                     <option value="floor_tile_installation_large">
@@ -377,7 +377,7 @@ export default function Wizard() {
                   .map((task) => (
                     <label
                       key={task.id}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                      className={`min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
                         ${
                           selectedTasks.includes(task.id)
                             ? "border-[#1D4ED8] bg-[#EFF6FF]"
@@ -390,7 +390,7 @@ export default function Wizard() {
                         onChange={() => toggleTask(task.id)}
                         className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                       />
-                      <span className="text-sm font-medium text-gray-900">
+                      <span className="min-w-0 break-words text-sm font-medium text-gray-900">
                         {task.label}
                       </span>
                     </label>
@@ -402,7 +402,7 @@ export default function Wizard() {
                   .map((task) => (
                     <label
                       key={task.id}
-                      className="flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
+                      className="min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border-dashed border-amber-400 bg-amber-50 cursor-pointer transition"
                     >
                       <input
                         type="checkbox"
@@ -410,10 +410,10 @@ export default function Wizard() {
                         onChange={() => toggleTask(task.id)}
                         className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                       />
-                      <span className="text-sm font-medium text-amber-700">
+                      <span className="min-w-0 break-words text-sm font-medium text-amber-700">
                         {task.label}
                       </span>
-                      <span className="ml-auto text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
+                      <span className="ml-auto shrink-0 text-xs font-bold bg-amber-100 text-amber-700 px-2 py-0.5 rounded">
                         Pre-1980
                       </span>
                     </label>
@@ -441,7 +441,7 @@ export default function Wizard() {
                         return updated;
                       });
                     }}
-                    className="border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
+                    className="w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none border-gray-300 focus:border-[#1D4ED8] focus:ring-[#1D4ED8]"
                   >
                     <option value="">— Select wall tile scope —</option>
                     <option value="full_wall_tile_installation">
@@ -461,7 +461,7 @@ export default function Wizard() {
                 {tareasActuales.map((task) => (
                   <label
                     key={task.id}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                    className={`min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
                       ${
                         task.conditional === "pre1980"
                           ? "border-dashed border-amber-400 bg-amber-50"
@@ -477,7 +477,7 @@ export default function Wizard() {
                       className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                     />
                     <span
-                      className={`text-sm font-medium ${
+                      className={`min-w-0 break-words text-sm font-medium ${
                         task.conditional === "pre1980"
                           ? "text-amber-700"
                           : "text-gray-900"
@@ -516,7 +516,7 @@ export default function Wizard() {
             {materialesActuales.map((item) => (
               <label
                 key={item.id}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
+                className={`min-w-0 w-full flex items-center gap-3 px-4 py-3 rounded-lg border cursor-pointer transition
                   ${
                     selectedMaterials.includes(item.id)
                       ? "border-[#1D4ED8] bg-[#EFF6FF]"
@@ -529,7 +529,7 @@ export default function Wizard() {
                   onChange={() => toggleMaterial(item.id)}
                   className="w-4 h-4 accent-[#1D4ED8] shrink-0"
                 />
-                <span className="text-sm font-medium text-gray-900">
+                <span className="min-w-0 break-words text-sm font-medium text-gray-900">
                   {item.label}
                 </span>
               </label>
@@ -547,7 +547,7 @@ export default function Wizard() {
             <select
               value={tileType}
               onChange={(e) => setTileType(e.target.value)}
-              className={`border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
+              className={`w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
                 ${
                   errores.tileType
                     ? "border-red-500 focus:ring-red-500"
@@ -575,7 +575,7 @@ export default function Wizard() {
               <select
                 value={bathroomSize}
                 onChange={(e) => setBathroomSize(e.target.value)}
-                className={`border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
+                className={`w-full border rounded-lg px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-1 transition appearance-none
                   ${
                     errores.bathroomSize
                       ? "border-red-500 focus:ring-red-500"
