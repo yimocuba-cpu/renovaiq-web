@@ -9,6 +9,7 @@ const materialsRules = {
       { id: "framing_cement_roughin", label: "Framing, Cement Board & Rough-in Supplies", cost: 1100 },
       { id: "vanity_cabinet", label: "Vanity Cabinet", cost: 2000 },
       { id: "mirror", label: "Mirror", cost: 300 },
+      { id: "bathroom_door", label: "Bathroom Door", cost: 250 },
     ],
     tileTypes: [
       { id: "ceramic", label: "Ceramic Tile", pricePerSqft: 5 },
@@ -29,6 +30,7 @@ const materialsRules = {
       { id: "framing_cement_roughin", label: "Framing, Cement Board & Rough-in Supplies", cost: 900 },
       { id: "vanity_cabinet", label: "Vanity Cabinet", cost: 600 },
       { id: "mirror", label: "Mirror", cost: 200 },
+      { id: "bathroom_door", label: "Bathroom Door", cost: 250 },
     ],
     tileTypes: [
       { id: "ceramic", label: "Ceramic Tile", pricePerSqft: 5 },
