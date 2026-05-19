@@ -25,7 +25,7 @@ export default function BathroomRemodeling() {
           <span className="inline-block rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-700">
             Bathroom Remodel Cost Guide
           </span>
-          <h1 className="mt-4 text-2xl font-bold text-gray-900 leading-snug">
+          <h1 className="mt-4 text-2xl font-bold text-gray-900 leading-snug text-center">
             What Does a Bathroom Remodel Actually Cost?
           </h1>
           <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -268,7 +268,7 @@ export default function BathroomRemodeling() {
 
         {/* FAQ */}
         <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-5">Common Questions</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">Common Questions</h2>
           <div className="space-y-5">
             {[
               {

@@ -601,12 +601,12 @@ export default function Wizard() {
       )}
 
       <div className="flex items-center gap-3 mt-6">
-        <div className="flex-1">
+        <div className="flex-1 sm:flex sm:items-center sm:justify-center sm:[&>*]:w-full">
           <Button variant="primary" onClick={handleCalculate}>
             Calculate
           </Button>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 sm:flex sm:items-center sm:justify-center sm:[&>*]:w-full">
           <Button variant="cancel" onClick={handleCancel}>
             Cancel
           </Button>

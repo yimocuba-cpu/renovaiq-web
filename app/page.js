@@ -32,7 +32,7 @@ export default function HomePage() {
               <h1 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
                 Calculate Your Bathroom Remodel Cost in Seconds
               </h1>
-              <p className="text-justify max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
+              <p className="text-left max-w-2xl text-base leading-7 text-gray-600 sm:text-lg">
                 Most homeowners start with a guess and end up paying for surprises.
                 RenovaIQ gives you a clearer breakdown before you hire anyone, buy
                 materials, or sign a contract.
@@ -89,7 +89,7 @@ export default function HomePage() {
             <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
               Why homeowners need a clearer estimate first
             </h2>
-            <p className="text-justify mt-4 text-base leading-7 text-gray-600">
+            <p className="text-left mt-4 text-base leading-7 text-gray-600">
               Bathroom projects often get expensive because the first number sounds
               simple, but the final bill is not. Labor changes, materials shift, and
               hidden issues show up later. RenovaIQ helps you see the structure
@@ -131,7 +131,7 @@ export default function HomePage() {
           <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
             Helpful places to shop for your remodel
           </h2>
-          <p className="text-justify mt-4 text-base leading-7 text-gray-600">
+          <p className="text-left mt-4 text-base leading-7 text-gray-600">
             Use trusted stores for your remodel materials. The price you pay does not
             change if you click through our links, and those visits help support and
             maintain the site at no extra cost to you.
@@ -204,9 +204,8 @@ export default function HomePage() {
               <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 Built with real remodeling insight
               </h2>
-              <p className="text-justify mt-4 text-base leading-7 text-gray-600">
-                This tool was shaped with practical remodeling experience so the estimate
-                feels useful, clear, and grounded in real-world work.
+              <p className="text-center mt-4 text-base leading-7 text-gray-300">
+                Get a better idea of your bathroom remodel cost before you hire anyone.
               </p>
             </div>
 
@@ -222,16 +221,16 @@ export default function HomePage() {
                   Sanabria Barrios Flooring Inc
                 </a>
               </p>
-              <p className="text-justify mt-2 text-sm leading-6 text-gray-600">
+              <p className="text-left mt-2 text-sm leading-6 text-gray-600">
                 The calculator is built on the real-world experience of Sanabria Barrios Flooring Inc., a company active since 2016 and serving Tampa and surrounding areas. Their hands-on work in residential remodeling helped shape a clearer estimation logic, aligned with actual labor and material costs.
               </p>
-              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
+              <p className="text-left mt-3 text-sm leading-6 text-gray-600">
                 They specialize in flooring, bathroom, staircase, kitchen, and backsplash remodeling, delivering projects with a strong focus on quality, detail, and efficient execution tailored to each client’s needs.
               </p>
-              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
+              <p className="text-left mt-3 text-sm leading-6 text-gray-600">
                 The company has been officially registered since 2016 with the Florida Division of Corporations (Registration No. P16000023654) and is listed with Dun & Bradstreet under D-U-N-S Number 03-550-0949, reinforcing its credibility and formal presence in the market.
               </p>
-              <p className="text-justify mt-3 text-sm leading-6 text-gray-600">
+              <p className="text-left mt-3 text-sm leading-6 text-gray-600">
                 Based on this real experience, we also recommend comparing materials and pricing from trusted suppliers before making final decisions, helping achieve the right balance between cost and quality.
               </p>
             </div>
@@ -296,9 +295,9 @@ export default function HomePage() {
             <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
               Ready for a clearer estimate?
             </h2>
-            <p className="text-justify mt-4 text-base leading-7 text-gray-300">
-              Get a better idea of your bathroom remodel cost before you hire anyone.
-            </p>
+              <p className="text-left mt-4 text-base leading-7 text-gray-600">
+                The calculator is built on the real-world experience of Sanabria Barrios Flooring Inc., a company active since 2016 and serving Tampa and surrounding areas. Their hands-on work in residential remodeling helped shape a clearer estimation logic, aligned with actual labor and material costs.
+              </p>
           </div>
 
           <div className="mt-6">
