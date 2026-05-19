@@ -21,7 +21,7 @@ export default function BathroomRemodeling() {
       <article className="mx-auto max-w-2xl px-4 py-10">
 
         {/* HEADER */}
-        <header className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
+        <header className="mb-4 rounded-2xl bg-white p-6 shadow-sm">
           <span className="inline-block rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-700">
             Bathroom Remodel Cost Guide
           </span>
@@ -47,7 +47,7 @@ export default function BathroomRemodeling() {
 
         {/* AVERAGE COST */}
         <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Average Bathroom Remodel Cost in the USA
           </h2>
           <p className="text-sm leading-6 text-gray-700 mb-5">
@@ -98,7 +98,7 @@ export default function BathroomRemodeling() {
 
         {/* HIDDEN COSTS */}
         <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Hidden Costs That Surprise Homeowners
           </h2>
           <p className="text-sm leading-6 text-gray-700 mb-5">
@@ -130,7 +130,7 @@ export default function BathroomRemodeling() {
 
         {/* CONTRACTOR COMPARISON */}
         <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Independent Contractor vs. Contracting Company
           </h2>
           <p className="text-sm leading-6 text-gray-700 mb-5">
@@ -229,7 +229,7 @@ export default function BathroomRemodeling() {
 
         {/* FACTORS */}
         <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Factors That Change Your Final Cost
           </h2>
           <p className="text-sm leading-6 text-gray-700 mb-5">
@@ -298,7 +298,7 @@ export default function BathroomRemodeling() {
 
         {/* CLOSING */}
         <section className="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">The Bottom Line</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">The Bottom Line</h2>
           <p className="text-sm leading-6 text-gray-700">
             Every project is different. Labor rates vary by location, material choices vary
             by preference, and hidden costs vary by your home&apos;s condition. Define your

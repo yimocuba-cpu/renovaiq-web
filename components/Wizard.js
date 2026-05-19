@@ -166,7 +166,7 @@ export default function Wizard() {
   const bathroomSizes = bathType ? materialsRules[bathType]?.bathroomSizes || [] : [];
 
   return (
-    <div className="flex flex-col gap-4 w-full overflow-hidden">
+    <div className="flex flex-col gap-4 w-full">
       {/* BLOQUE 1: LABOR */}
       <StepCard
         stepNumber={1}
@@ -600,7 +600,7 @@ export default function Wizard() {
         </div>
       )}
 
-      <div className="flex gap-3">
+      <div className="flex items-center gap-3 mt-6">
         <div className="flex-1">
           <Button variant="primary" onClick={handleCalculate}>
             Calculate
