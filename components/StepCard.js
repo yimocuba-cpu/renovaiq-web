@@ -5,7 +5,7 @@ export default function StepCard({ stepNumber, title, hint, children }) {
 
   return (
     <section
-      className="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col gap-4 shadow-sm"
+      className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 flex flex-col gap-3 sm:gap-4 shadow-sm hover:shadow-md transition-shadow"
       aria-labelledby={titleId}
     >
       <div className="flex items-center gap-2">
@@ -17,17 +17,17 @@ export default function StepCard({ stepNumber, title, hint, children }) {
         </span>
       </div>
 
-      <h2 id={titleId} className="text-center text-base font-semibold text-gray-900 leading-snug">
+      <h2 id={titleId} className="text-center text-sm sm:text-base font-semibold text-gray-900 leading-snug">
         {title}
       </h2>
 
       {hint && (
-        <p className="text-xs text-gray-500 leading-relaxed -mt-2">
+        <p className="text-xs text-gray-500 leading-relaxed -mt-1 sm:-mt-2">
           {hint}
         </p>
       )}
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2 sm:gap-3">
         {children}
       </div>
     </section>

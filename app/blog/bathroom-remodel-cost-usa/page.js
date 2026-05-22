@@ -18,17 +18,17 @@ export const metadata = {
 export default function BathroomRemodeling() {
   return (
     <main className="bg-gray-100 text-gray-900">
-      <article className="mx-auto max-w-2xl px-4 py-10">
+      <article className="mx-auto max-w-2xl px-3 sm:px-4 py-8 sm:py-10 md:py-12">
 
         {/* HEADER */}
-        <header className="mb-4 rounded-2xl bg-white p-6 shadow-sm">
+        <header className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
           <span className="inline-block rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-700">
             Bathroom Remodel Cost Guide
           </span>
-          <h1 className="mt-4 text-2xl font-bold text-gray-900 leading-snug text-center">
+          <h1 className="mt-4 text-xl sm:text-2xl font-bold text-gray-900 leading-snug text-center">
             What Does a Bathroom Remodel Actually Cost?
           </h1>
-          <p className="mt-3 text-sm leading-6 text-gray-600">
+          <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
             A practical breakdown of labor, materials, hidden costs, and the contractor
             decisions that shape your final bill — before you hire anyone.
           </p>
@@ -36,8 +36,8 @@ export default function BathroomRemodeling() {
         </header>
 
         {/* INTRO */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <p className="text-sm leading-6 text-gray-700">
+        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
+          <p className="text-xs sm:text-sm leading-5 sm:leading-6 text-gray-700">
             Most homeowners get their first number from a contractor quote — and that number
             changes. Labor shifts, materials add up, and problems appear once demolition
             starts. This guide breaks down what you&apos;re actually paying for so you can
@@ -46,48 +46,48 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* AVERAGE COST */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
+        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
             Average Bathroom Remodel Cost in the USA
           </h2>
-          <p className="text-sm leading-6 text-gray-700 mb-5">
+          <p className="text-xs sm:text-sm leading-5 sm:leading-6 text-gray-700 mb-4 sm:mb-5">
             The national mid-range remodel typically lands around{" "}
             <strong>$10,000 to $15,000</strong>. The final number depends on bathroom
             size, materials, contractor type, and ZIP code.
           </p>
 
           {/* Cost tiers — stacked on mobile */}
-          <div className="space-y-3">
-            <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
+          <div className="space-y-2 sm:space-y-3">
+            <div className="rounded-lg sm:rounded-xl bg-gray-50 border border-gray-200 p-3 sm:p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Basic Remodel</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">$5,000 – $8,000</p>
-              <p className="mt-1 text-sm leading-5 text-gray-600">
+              <p className="mt-1 text-base sm:text-lg font-bold text-gray-900">$5,000 – $8,000</p>
+              <p className="mt-1 text-xs sm:text-sm leading-4 sm:leading-5 text-gray-600">
                 Paint, fixtures, small tile work, and minor refreshes. No structural changes.
               </p>
             </div>
-            <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
+            <div className="rounded-lg sm:rounded-xl bg-gray-50 border border-gray-200 p-3 sm:p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Mid-Range Remodel</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">$10,000 – $18,000</p>
-              <p className="mt-1 text-sm leading-5 text-gray-600">
+              <p className="mt-1 text-base sm:text-lg font-bold text-gray-900">$10,000 – $18,000</p>
+              <p className="mt-1 text-xs sm:text-sm leading-4 sm:leading-5 text-gray-600">
                 New vanity, flooring, updated fixtures, partial tiling, plumbing adjustments.
               </p>
             </div>
-            <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
+            <div className="rounded-lg sm:rounded-xl bg-gray-50 border border-gray-200 p-3 sm:p-4">
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">High-End Remodel</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">$20,000 – $40,000+</p>
-              <p className="mt-1 text-sm leading-5 text-gray-600">
+              <p className="mt-1 text-base sm:text-lg font-bold text-gray-900">$20,000 – $40,000+</p>
+              <p className="mt-1 text-xs sm:text-sm leading-4 sm:leading-5 text-gray-600">
                 Custom layouts, premium fixtures, heated floors, and structural changes.
               </p>
             </div>
           </div>
 
-          <p className="mt-5 text-sm leading-6 text-gray-700">
+          <p className="mt-4 sm:mt-5 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-700">
             Master bathrooms cost more than guest bathrooms. Shower-only updates cost less
             than a full redo. ZIP code and local labor rates shift the outcome significantly.
           </p>
 
-          <div className="mt-5 pt-5 border-t border-gray-100">
-            <p className="text-sm text-gray-600 mb-3">
+          <div className="mt-4 sm:mt-5 pt-4 sm:pt-5 border-t border-gray-100">
+            <p className="text-xs sm:text-sm text-gray-600 mb-3">
               Want a more precise range for your bathroom and ZIP code?
             </p>
             <Button href="/calculadora" variant="primary" ariaLabel="Get estimate">
@@ -97,7 +97,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* HIDDEN COSTS */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
+        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Hidden Costs That Surprise Homeowners
           </h2>
