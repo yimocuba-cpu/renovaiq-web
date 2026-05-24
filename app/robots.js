@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://renovaiq-web.vercel.app";
+  const baseUrl = "https://renovaiqapp.com";
 
   return {
     rules: [

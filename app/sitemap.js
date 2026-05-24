@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://renovaiq-web.vercel.app";
+  const baseUrl = "https://renovaiqapp.com";
   const now = new Date();
 
   return [
