@@ -1,5 +1,26 @@
 import CalculadoraClient from "../../components/CalculadoraClient";
 
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "RenovaIQ Bathroom Remodel Cost Estimator",
+  "description": "Interactive bathroom remodel cost calculator with labor, materials, and hidden cost breakdown by ZIP code.",
+  "url": "https://renovaiq-web.vercel.app/calculadora",
+  "applicationCategory": "UtilityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Interactive bathroom type selector",
+    "Labor and material work selection",
+    "ZIP code-based labor multiplier",
+    "Real-time cost calculation",
+    "PDF estimate export"
+  ]
+};
+
 export const metadata = {
   title: "Bathroom Remodel Cost Estimator | Labor & Materials Breakdown | RenovaIQ",
   description:
@@ -12,12 +33,19 @@ export const metadata = {
     "renovation budget planner",
     "bathroom cost by zip code",
   ],
+  canonical: "https://renovaiq-web.vercel.app/calculadora",
 };
 
 export default function CalculadoraPage() {
   return (
-    <main className="bg-slate-50 text-slate-900">
-      <CalculadoraClient />
-    </main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+      />
+      <main className="bg-slate-50 text-slate-900">
+        <CalculadoraClient />
+      </main>
+    </>
   );
 }
