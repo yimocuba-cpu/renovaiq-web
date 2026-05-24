@@ -1,10 +1,8 @@
 import Button from "./Button";
 
 export default function AffiliateSection() {
-  // TODO: Replace with actual Lowes affiliate link when affiliate program is approved
-  const LOWES_LINK = "#";
-  // TODO: Replace with actual Floor & Decor affiliate link when affiliate program is approved
-  const FLOOR_DECOR_LINK = "#";
+  const LOWES_LINK = "PEGAR_AQUI_LINK_LOWES";
+  const FLOOR_DECOR_LINK = "PEGAR_AQUI_LINK_FLOOR_DECOR";
 
   return (
     <section className="flex flex-col gap-3">

@@ -47,30 +47,13 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://renovaiq-web.vercel.app/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "RenovaIQ - Bathroom Remodel Cost Calculator",
+        url: "https://renovaiq-web.vercel.app/favicon.ico",
+        width: 192,
+        height: 192,
+        alt: "RenovaIQ Bathroom Remodel Calculator",
       },
     ],
   },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Bathroom Remodel Cost Calculator | Free Estimate Tool | RenovaIQ",
-    description:
-      "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners.",
-    images: ["https://renovaiq-web.vercel.app/og-image.png"],
-  },
-
-  authors: [
-    {
-      name: "RenovaIQ",
-      url: "https://renovaiq-web.vercel.app",
-    },
-  ],
-
-  themeColor: "#1e293b",
 
   icons: {
     icon: "/favicon.ico",

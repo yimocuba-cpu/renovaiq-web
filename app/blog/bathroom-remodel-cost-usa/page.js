@@ -1,32 +1,5 @@
 import Button from "../../../components/Button";
 
-const jsonLdSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "What Does a Bathroom Remodel Actually Cost?",
-  "description": "A practical guide to bathroom remodel costs in the USA. See how labor, materials, and hidden costs add up — and how contractor type affects your final bill.",
-  "url": "https://renovaiq-web.vercel.app/blog/bathroom-remodel-cost-usa",
-  "image": "https://renovaiq-web.vercel.app/og-image.png",
-  "datePublished": "2026-05-24",
-  "dateModified": "2026-05-24",
-  "author": {
-    "@type": "Organization",
-    "name": "RenovaIQ",
-    "url": "https://renovaiq-web.vercel.app"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "RenovaIQ",
-    "url": "https://renovaiq-web.vercel.app",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://renovaiq-web.vercel.app/favicon.ico",
-      "width": 192,
-      "height": 192
-    }
-  }
-};
-
 export const metadata = {
   title: "What Does a Bathroom Remodel Actually Cost? | RenovaIQ",
   description:
@@ -40,17 +13,11 @@ export const metadata = {
     "hidden costs bathroom remodel",
     "bathroom remodel estimate",
   ],
-  canonical: "https://renovaiq-web.vercel.app/blog/bathroom-remodel-cost-usa",
 };
 
 export default function BathroomRemodeling() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
-      />
-      <main className="bg-gray-100 text-gray-900">
+    <main className="bg-gray-100 text-gray-900">
       <article className="mx-auto max-w-2xl px-3 sm:px-4 py-8 sm:py-10 md:py-12">
 
         {/* HEADER */}
@@ -349,6 +316,5 @@ export default function BathroomRemodeling() {
 
       </article>
     </main>
-    </>
   );
 }

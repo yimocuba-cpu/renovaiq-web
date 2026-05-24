@@ -1,31 +1,5 @@
 import Button from "../components/Button";
 
-const jsonLdSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "RenovaIQ - Bathroom Remodel Cost Calculator",
-  "description": "Free bathroom remodel cost calculator for USA homeowners. Get instant estimates with labor, materials, and hidden costs breakdown.",
-  "url": "https://renovaiq-web.vercel.app",
-  "applicationCategory": "UtilityApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "featureList": [
-    "Labor cost breakdown by task",
-    "Materials cost estimation",
-    "Hidden costs visibility",
-    "ZIP code-based pricing",
-    "Free, no signup required"
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "120"
-  }
-};
-
 export const metadata = {
   title: "Bathroom Remodel Cost Calculator | Instant Estimates | RenovaIQ",
   description:
@@ -38,22 +12,14 @@ export const metadata = {
     "free bathroom estimate tool",
     "bathroom renovation price calculator",
   ],
-  canonical: "https://renovaiq-web.vercel.app",
 };
 
-// TODO: Replace with actual Lowes affiliate link when affiliate program is approved
-const LOWES_LINK = "#";
-// TODO: Replace with actual Floor & Decor affiliate link when affiliate program is approved
-const FLOOR_DECOR_LINK = "#";
+const LOWES_LINK = "PASTE_LOWES_AFFILIATE_LINK_HERE";
+const FLOOR_DECOR_LINK = "PASTE_FLOOR_DECOR_AFFILIATE_LINK_HERE";
 
 export default function HomePage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
-      />
-      <main className="bg-white text-gray-900">
+    <main className="bg-white text-gray-900">
       {/* HERO */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="grid gap-8 md:gap-10 lg:grid-cols-2 lg:items-center">
@@ -342,6 +308,5 @@ export default function HomePage() {
         </div>
       </section>
     </main>
-    </>
   );
 }
