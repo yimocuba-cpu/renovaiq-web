@@ -63,10 +63,10 @@ export const metadata = {
 
   metadataBase: new URL("https://renovaiqapp.com"),
 
-  // CÓDIGO NUEVO DE VERIFICACIÓN DE IMPACT CORREGIDO:
+  // CÓDIGO ACTUALIZADO DE VERIFICACIÓN:
   verification: {
     other: {
-      'impact-site-verification': ['ffecbd7b-195f-4fbf-8a28-3e16fc43fd5f'],
+      'impact-site-verification': ['eb4a42e1-fd1c-4174-ac97-610a0115fd4b'],
     },
   },
 };
