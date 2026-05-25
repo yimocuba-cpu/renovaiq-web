@@ -62,13 +62,6 @@ export const metadata = {
   },
 
   metadataBase: new URL("https://renovaiqapp.com"),
-
-  // CÓDIGO ACTUALIZADO DE VERIFICACIÓN:
-  verification: {
-    other: {
-      'impact-site-verification': ['eb4a42e1-fd1c-4174-ac97-610a0115fd4b'],
-    },
-  },
 };
 
 const jsonLdSchema = {
@@ -113,6 +106,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* PUESTO DIRECTAMENTE AQUÍ COMO HTML TRADICIONAL */}
+        <meta name="impact-site-verification" content="eb4a42e1-fd1c-4174-ac97-610a0115fd4b" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
