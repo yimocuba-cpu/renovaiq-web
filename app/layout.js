@@ -41,13 +41,13 @@ export const metadata = {
     title: "Bathroom Remodel Cost Calculator | Free Estimate Tool | RenovaIQ",
     description:
       "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners. No signup required.",
-    url: "https://renovaiq-web.vercel.app",
+    url: "https://renovaiqapp.com",
     siteName: "RenovaIQ",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "https://renovaiq-web.vercel.app/favicon.ico",
+        url: "https://renovaiqapp.com/favicon.ico",
         width: 192,
         height: 192,
         alt: "RenovaIQ Bathroom Remodel Calculator",
@@ -61,7 +61,14 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  metadataBase: new URL("https://renovaiq-web.vercel.app"),
+  metadataBase: new URL("https://renovaiqapp.com"),
+
+  // CÓDIGO NUEVO DE VERIFICACIÓN DE IMPACT CORREGIDO:
+  verification: {
+    other: {
+      'impact-site-verification': ['ffecbd7b-195f-4fbf-8a28-3e16fc43fd5f'],
+    },
+  },
 };
 
 const jsonLdSchema = {
@@ -69,13 +76,13 @@ const jsonLdSchema = {
   "@type": "CollectionPage",
   "name": "RenovaIQ - Bathroom Remodel Cost Calculator",
   "description": "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners.",
-  "url": "https://renovaiq-web.vercel.app",
+  "url": "https://renovaiqapp.com",
   "mainEntity": {
     "@type": "SoftwareApplication",
     "name": "RenovaIQ",
     "description": "Free online bathroom remodel cost calculator and estimator for USA homeowners",
     "applicationCategory": "UtilityApplication",
-    "url": "https://renovaiq-web.vercel.app",
+    "url": "https://renovaiqapp.com",
     "operatingSystem": "Web",
     "offers": {
       "@type": "Offer",
@@ -93,7 +100,7 @@ const jsonLdSchema = {
       "@type": "Tool",
       "name": "Bathroom Remodel Cost Calculator",
       "description": "Estimate bathroom remodel costs by labor, materials, and hidden costs",
-      "url": "https://renovaiq-web.vercel.app/calculadora",
+      "url": "https://renovaiqapp.com/calculadora",
     },
   ],
   "mainContentOfPage": {
