@@ -14,8 +14,8 @@ export const metadata = {
   ],
 };
 
-const LOWES_LINK = "PASTE_LOWES_AFFILIATE_LINK_HERE";
-const FLOOR_DECOR_LINK = "PASTE_FLOOR_DECOR_AFFILIATE_LINK_HERE";
+const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
+const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
 
 export default function HomePage() {
   return (

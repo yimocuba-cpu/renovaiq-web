@@ -4,8 +4,8 @@ import Wizard from "./Wizard";
 import Button from "./Button";
 import Navbar from "./Navbar";
 
-const LOWES_LINK = "PASTE_LOWES_AFFILIATE_LINK_HERE";
-const FLOOR_DECOR_LINK = "PASTE_FLOOR_DECOR_AFFILIATE_LINK_HERE";
+const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
+const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
 const SANABRIA_MAPS_LINK = "https://www.google.com/maps/place/Sanabria+Barrios+Flooring+Inc/data=!4m2!3m1!1s0x65b7c928e8114c4f:0xdf4de619ff1eb4a9";
 
 export default function CalculadoraClient() {

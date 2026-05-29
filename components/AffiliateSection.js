@@ -1,8 +1,8 @@
 import Button from "./Button";
 
 export default function AffiliateSection() {
-  const LOWES_LINK = "PEGAR_AQUI_LINK_LOWES";
-  const FLOOR_DECOR_LINK = "PEGAR_AQUI_LINK_FLOOR_DECOR";
+  const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
+  const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
 
   return (
     <section className="flex flex-col gap-3">

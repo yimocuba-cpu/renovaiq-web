@@ -116,6 +116,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="author" content="RenovaIQ" />
+        <link rel="canonical" href="https://renovaiqapp.com" />
+        <meta name="theme-color" content="#1D4ED8" />
+
         {/* SCRIPT DE IMPACT FORMATEADO PARA NEXT.JS */}
         <script
           type="text/javascript"
