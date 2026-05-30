@@ -17,8 +17,8 @@ const materialsRules = {
       { id: "marble", label: "Marble Tile", pricePerSqft: 25 },
     ],
     bathroomSizes: [
-      { id: "large", label: "Large", sqft: 550 },
-      { id: "medium", label: "Medium", sqft: 350 },
+      { id: "large", label: "Large", sqft: 450 },
+      { id: "medium", label: "Medium", sqft: 250 },
     ],
   },
 
@@ -38,8 +38,8 @@ const materialsRules = {
       { id: "marble", label: "Marble Tile", pricePerSqft: 25 },
     ],
     bathroomSizes: [
-      { id: "full", label: "Full Bathroom", sqft: 250 },
-      { id: "partial", label: "Partial Bathroom", sqft: 180 },
+      { id: "full", label: "Full Bathroom", sqft: 200 },
+      { id: "partial", label: "Partial Bathroom", sqft: 120 },
     ],
   },
 
