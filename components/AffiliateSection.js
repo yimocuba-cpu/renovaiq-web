@@ -1,17 +1,27 @@
 import Button from "./Button";
+import AFFILIATE_LINKS from "./affiliateLinks";
 
 export default function AffiliateSection() {
-  const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
-  const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
-
   return (
     <section className="flex flex-col gap-3">
-      <Button variant="affiliate" href={LOWES_LINK}>
-        Shop at Lowe&apos;s
+      <Button variant="affiliate" href={AFFILIATE_LINKS["amazon"]} ariaLabel="Shop on Amazon">
+        Shop on Amazon
       </Button>
 
-      <Button variant="affiliate" href={FLOOR_DECOR_LINK}>
-        Shop at Floor & Decor
+      <Button variant="affiliate" href={AFFILIATE_LINKS["wayfair"]} ariaLabel="Shop on Wayfair">
+        Shop on Wayfair
+      </Button>
+
+      <Button variant="affiliate" href={AFFILIATE_LINKS["ace-decor"]} ariaLabel="Shop on Ace Decor">
+        Shop on Ace Decor
+      </Button>
+
+      <Button variant="affiliate" href={AFFILIATE_LINKS["lowes"]} ariaLabel="Shop on Lowe's">
+        Shop on Lowe's
+      </Button>
+
+      <Button variant="affiliate" href={AFFILIATE_LINKS["floor-decor"]} ariaLabel="Shop on Floor & Decor">
+        Shop on Floor & Decor
       </Button>
     </section>
   );
