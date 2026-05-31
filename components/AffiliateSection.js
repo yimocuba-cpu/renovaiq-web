@@ -16,8 +16,8 @@ export default function AffiliateSection() {
         Shop on Ace Decor
       </Button>
 
-      <Button variant="affiliate" href={AFFILIATE_LINKS["lowes"]} ariaLabel="Shop on Lowe's">
-        Shop on Lowe's
+      <Button variant="affiliate" href={AFFILIATE_LINKS["lowes"]} ariaLabel="Shop on Lowe&apos;s">
+        Shop on Lowe&apos;s
       </Button>
 
       <Button variant="affiliate" href={AFFILIATE_LINKS["floor-decor"]} ariaLabel="Shop on Floor & Decor">
