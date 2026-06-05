@@ -16,15 +16,19 @@ const geistMono = localFont({
 export const metadata = {
   title: "Bathroom Remodel Cost Calculator | Free Estimate Tool | RenovaIQ",
   description:
-    "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners. No signup required.",
+    "Calculate accurate bathroom remodel costs instantly. See labor, materials, hidden costs, contractor comparisons, and where to buy materials. Free tool for USA homeowners. No signup required.",
+  authors: [{ name: "RenovaIQ" }],
   
   keywords: [
     "bathroom remodel cost calculator",
     "bathroom renovation estimate",
     "bathroom remodeling cost USA",
+    "bathroom remodel materials",
+    "bathroom remodel contractors comparison",
+    "bathroom renovation hidden costs",
     "free bathroom remodel estimate",
-    "bathroom cost breakdown",
-    "remodel estimate labor materials",
+    "best bathroom remodel stores",
+    "bathroom renovation price calculator",
   ],
 
   robots: {
@@ -40,8 +44,8 @@ export const metadata = {
   openGraph: {
     title: "Bathroom Remodel Cost Calculator | Free Estimate Tool | RenovaIQ",
     description:
-      "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners. No signup required.",
-    url: "https://renovaiqapp.com",
+      "Calculate accurate bathroom remodel costs instantly. See labor, materials, hidden costs, contractor comparisons, and where to buy materials.",
+          url: process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com",
     siteName: "RenovaIQ",
     type: "website",
     locale: "en_US",
@@ -71,21 +75,33 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 
-  metadataBase: new URL("https://renovaiqapp.com"),
+        metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com"),
 };
 
 const jsonLdSchema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "RenovaIQ - Bathroom Remodel Cost Calculator",
-  "description": "Calculate accurate bathroom remodel costs instantly. See labor, materials, and hidden costs separated. Free tool for USA homeowners.",
-  "url": "https://renovaiqapp.com",
+  "@type": "WebSite",
+        "url": process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com",
+  "name": "RenovaIQ",
+  "description": "Calculate accurate bathroom remodel costs instantly. See labor, materials, hidden costs, contractor comparisons, and where to buy materials.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RenovaIQ",
+    "logo": {
+      "@type": "ImageObject",
+            "url": (process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com") + "/og-image.jpg",
+    },
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "RenovaIQ",
+  },
   "mainEntity": {
     "@type": "SoftwareApplication",
     "name": "RenovaIQ",
     "description": "Free online bathroom remodel cost calculator and estimator for USA homeowners",
     "applicationCategory": "UtilityApplication",
-    "url": "https://renovaiqapp.com",
+          "url": process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com",
     "operatingSystem": "Web",
     "offers": {
       "@type": "Offer",
@@ -103,7 +119,7 @@ const jsonLdSchema = {
       "@type": "Tool",
       "name": "Bathroom Remodel Cost Calculator",
       "description": "Estimate bathroom remodel costs by labor, materials, and hidden costs",
-      "url": "https://renovaiqapp.com/calculadora",
+            "url": (process.env.NEXT_PUBLIC_SITE_URL || "https://renovaiqapp.com") + "/calculadora",
     },
   ],
   "mainContentOfPage": {

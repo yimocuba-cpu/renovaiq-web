@@ -25,7 +25,7 @@ const laborBaseRates = {
       {
         id: "bathtub_installation",
         label: "Bathtub Installation",
-        cost: 2000,
+        cost: 1000,
       },
       {
         id: "glass_shower_door_installation",
@@ -35,12 +35,12 @@ const laborBaseRates = {
       {
         id: "full_wall_tile_installation",
         label: "Full Wall Tile Installation",
-        cost: 4000,
+        cost: 3500,
       },
       {
         id: "partial_wall_tile_installation",
         label: "Partial Wall Tile Installation",
-        cost: 2500,
+        cost: 2000,
       },
       {
         id: "floor_tile_installation_large",
@@ -78,7 +78,7 @@ const laborBaseRates = {
       {
         id: "wall_texture_paint",
         label: "Wall Texture & Paint",
-        cost: 500,
+        cost: 300,
       },
       {
         id: "vanity_cabinet_installation",
@@ -88,7 +88,7 @@ const laborBaseRates = {
       {
         id: "bathtub_installation",
         label: "Bathtub Installation",
-        cost: 1000,
+        cost: 500,
       },
       {
         id: "glass_shower_door_installation",
@@ -98,7 +98,7 @@ const laborBaseRates = {
       {
         id: "full_wall_tile_installation",
         label: "Full Wall Tile Installation",
-        cost: 2200,
+        cost: 1900,
       },
       {
         id: "partial_wall_tile_installation",
