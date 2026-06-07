@@ -153,7 +153,7 @@ export default function Wizard() {
       zipCode,
     });
 
-    setShowLeadForm(true);
+    setShowLeadForm(false);
 
     setTimeout(() => {
       document.getElementById("resultado")?.scrollIntoView({ behavior: "smooth" });

@@ -156,8 +156,68 @@ export default function BathroomRemodeling() {
           </p>
         </section>
 
-        {/* AVERAGE COST */}
+        {/* QUICK NAVIGATION */}
         <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 text-center">
+            What you’ll find in this guide
+          </h2>
+          <p className="text-sm leading-6 text-gray-700 mb-4">
+            Use these links to jump directly to the most helpful sections on costs, contractors, and materials.
+          </p>
+          <div className="space-y-3">
+            {[
+              {
+                href: "#average-cost",
+                title: "Average remodel costs",
+                description:
+                  "National ranges and examples for basic, mid-range, and high-end remodels.",
+              },
+              {
+                href: "#hidden-costs",
+                title: "Hidden costs that surprise",
+                description:
+                  "Permits, repairs, and extra expenses that often don’t show up in the first quote.",
+              },
+              {
+                href: "#contractor-comparison",
+                title: "Independent contractor vs company",
+                description:
+                  "When each option makes sense and how price, communication, and backup differ.",
+              },
+              {
+                href: "#cost-factors",
+                title: "Factors that change your final price",
+                description:
+                  "Location, material quality, project scope, and contractor experience.",
+              },
+              {
+                href: "#where-to-buy",
+                title: "Where to buy materials",
+                description:
+                  "A comparison of key retailers to help you save time, money, and avoid delays.",
+              },
+              {
+                href: "#calculator",
+                title: "Calculate your ZIP estimate",
+                description:
+                  "Go straight to the calculator for a personalized estimate.",
+              },
+            ].map((item) => (
+              <div key={item.href} className="rounded-xl bg-gray-50 border border-gray-200 p-4">
+                <a
+                  href={item.href}
+                  className="text-blue-700 hover:text-blue-900 font-semibold underline transition-colors duration-200"
+                >
+                  {item.title}
+                </a>
+                <p className="mt-2 text-sm leading-5 text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* AVERAGE COST */}
+        <section id="average-cost" className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
           <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center">
             Average Bathroom Remodel Cost in the USA
           </h2>
@@ -212,7 +272,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* HIDDEN COSTS */}
-        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
+        <section id="hidden-costs" className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-white p-4 sm:p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Hidden Costs That Surprise Homeowners
           </h2>
@@ -243,7 +303,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* CONTRACTOR COMPARISON */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
+        <section id="contractor-comparison" className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Independent Contractor vs. Contracting Company
           </h2>
@@ -342,7 +402,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* FACTORS */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
+        <section id="cost-factors" className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Factors That Change Your Final Cost
           </h2>
@@ -367,7 +427,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* WHERE TO BUY (inserted before CTA) */}
-        <section className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
+        <section id="where-to-buy" className="mb-8 rounded-2xl bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900 mb-3 text-center">
             Where to Buy Bathroom Remodel Materials
           </h2>
@@ -460,7 +520,7 @@ export default function BathroomRemodeling() {
         </section>
 
         {/* CTA */}
-        <section className="mb-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-indigo-100 p-6 shadow-sm">
+        <section id="calculator" className="mb-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-indigo-100 p-6 shadow-sm">
           <h3 className="text-lg font-bold text-gray-900 mb-2">
             Get a clearer estimate for your project
           </h3>

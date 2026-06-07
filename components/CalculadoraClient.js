@@ -2,10 +2,9 @@
 
 import Wizard from "./Wizard";
 import Button from "./Button";
+import AFFILIATE_LINKS from "./affiliateLinks";
 import Navbar from "./Navbar";
 
-const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
-const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
 const SANABRIA_MAPS_LINK = "https://www.google.com/maps/place/Sanabria+Barrios+Flooring+Inc/data=!4m2!3m1!1s0x65b7c928e8114c4f:0xdf4de619ff1eb4a9";
 
 export default function CalculadoraClient() {
@@ -48,6 +47,96 @@ export default function CalculadoraClient() {
         <Wizard />
       </section>
 
+      {/* AFILIADOS / Helpful places to shop for your remodel */}
+      <section className="border-t border-slate-200 bg-slate-100">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 leading-tight">
+              Helpful places to shop for your remodel
+            </h2>
+            <p className="text-center mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+              Use trusted stores for your remodel materials. The price you pay does not change if you click through our links, and those visits help support and maintain the site at no extra cost to you.
+            </p>
+          </div>
+
+          <div className="mt-6 sm:mt-8 grid gap-5 sm:gap-6 md:grid-cols-2">
+            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Materials source</p>
+              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">Amazon</h3>
+              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+                Fast shipping, a massive selection, and strong search filtering — great for quick replacements and budget-friendly fixtures.
+              </p>
+              <p className="mt-3 text-xs text-slate-500">No price change for you — these visits help support the site.</p>
+              <div className="mt-4">
+                <Button variant="affiliate" href={AFFILIATE_LINKS["amazon"]} ariaLabel="Shop at Amazon">
+                  Shop at Amazon
+                </Button>
+              </div>
+            </article>
+
+            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Materials source</p>
+              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">Wayfair</h3>
+              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+                Curated styles, affordable bundles, and helpful filtering — ideal for vanities, mirrors, and coordinated bathroom packages.
+              </p>
+              <p className="mt-3 text-xs text-slate-500">No price change for you — these visits help support the site.</p>
+              <div className="mt-4">
+                <Button variant="affiliate" href={AFFILIATE_LINKS["wayfair"]} ariaLabel="Shop at Wayfair">
+                  Shop at Wayfair
+                </Button>
+              </div>
+            </article>
+
+            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Materials source</p>
+              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">Ace Decor</h3>
+              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+                Boutique and design-forward fixtures for higher-end finishes and custom bathroom styling.
+              </p>
+              <p className="mt-3 text-xs text-slate-500">No price change for you — these visits help support the site.</p>
+              <div className="mt-4">
+                <Button variant="affiliate" href={AFFILIATE_LINKS["ace-decor"]} ariaLabel="Shop at Ace Decor">
+                  Shop at Ace Decor
+                </Button>
+              </div>
+            </article>
+
+            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Materials source</p>
+              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">Lowe&apos;s</h3>
+              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+                A reliable starting point for bathroom remodel essentials, fixtures, and everyday project materials.
+              </p>
+              <p className="mt-3 text-xs text-slate-500">The price you pay does not change. This helps support and maintain the site.</p>
+              <div className="mt-4">
+                <Button variant="affiliate" href={AFFILIATE_LINKS["lowes"]} ariaLabel="Shop at Lowe's">
+                  Shop at Lowe&apos;s
+                </Button>
+              </div>
+            </article>
+
+            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Materials source</p>
+              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">Floor &amp; Decor</h3>
+              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
+                Deep tile and flooring inventory with trade-friendly options — ideal for tile-first remodels.
+              </p>
+              <p className="mt-3 text-xs text-slate-500">No extra cost to you. These visits help keep the tool running.</p>
+              <div className="mt-4">
+                <Button variant="affiliate" href={AFFILIATE_LINKS["floor-decor"]} ariaLabel="Shop at Floor and Decor">
+                  Shop at Floor &amp; Decor
+                </Button>
+              </div>
+            </article>
+          </div>
+
+          <p className="mt-4 sm:mt-6 text-xs text-center text-slate-500">
+            We may earn a commission if you buy through these links, at no extra cost to you.
+          </p>
+        </div>
+      </section>
+
       {/* COLLABORATOR / TRUST */}
       <section className="border-t border-slate-200 bg-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -57,9 +146,7 @@ export default function CalculadoraClient() {
                 Built with real remodeling insight
               </h2>
               <p className="text-center mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
-                This calculator was shaped with practical remodeling experience so
-                the estimate feels more realistic, structured, and useful in the
-                real world.
+                This calculator was shaped with practical remodeling experience so the estimate feels more realistic, structured, and useful in the real world.
               </p>
             </div>
 
@@ -83,89 +170,13 @@ export default function CalculadoraClient() {
                 They specialize in flooring, bathroom, staircase, kitchen, and backsplash remodeling, delivering projects with a strong focus on quality, detail, and efficient execution tailored to each client’s needs.
               </p>
               <p className="text-left mt-3 text-sm leading-6 text-slate-600">
-                The company has been officially registered since 2016 with the Florida Division of Corporations (Registration No. P16000023654) and is listed with Dun & Bradstreet under D-U-N-S Number 03-550-0949, reinforcing its credibility and formal presence in the market.
+                The company has been officially registered since 2016 with the Florida Division of Corporations (Registration No. P16000023654) and is listed with Dun &amp; Bradstreet under D-U-N-S Number 03-550-0949, reinforcing its credibility and formal presence in the market.
               </p>
               <p className="text-left mt-3 text-sm leading-6 text-slate-600">
                 Based on this real experience, we also recommend comparing materials and pricing from trusted suppliers before making final decisions, helping achieve the right balance between cost and quality.
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* AFILIADOS — SOLO AL FINAL */}
-      <section className="border-t border-slate-200 bg-slate-100">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 leading-tight">
-              Helpful places to shop for your remodel
-            </h2>
-            <p className="text-center mt-4 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
-              Use trusted stores for your remodel materials. The price you pay
-              does not change if you click through our links, and those visits
-              help support and maintain the site at no extra cost to you.
-            </p>
-          </div>
-
-          <div className="mt-6 sm:mt-8 grid gap-5 sm:gap-6 md:grid-cols-2">
-            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                Materials source
-              </p>
-              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">
-                Lowe&apos;s
-              </h3>
-              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
-                A reliable starting point for bathroom remodel essentials,
-                fixtures, and everyday project materials. Useful when you want a
-                broad selection and quick access to common renovation products.
-              </p>
-              <p className="mt-3 text-xs text-slate-500">
-                The price you pay does not change. This helps support and
-                maintain the site.
-              </p>
-              <div className="mt-4">
-                <Button
-                  variant="affiliate"
-                  href={LOWES_LINK}
-                  ariaLabel="Shop at Lowe's"
-                >
-                  Shop at Lowe&apos;s
-                </Button>
-              </div>
-            </article>
-
-            <article className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                Materials source
-              </p>
-              <h3 className="mt-3 text-lg sm:text-xl font-bold text-slate-900">
-                Floor &amp; Decor
-              </h3>
-              <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-slate-600">
-                A strong choice for tile, flooring, and remodel-focused
-                finishes. Ideal for homeowners looking for design-forward
-                materials and a more specialized selection for bath projects.
-              </p>
-              <p className="mt-3 text-xs text-slate-500">
-                No extra cost to you. These visits help keep the tool running.
-              </p>
-              <div className="mt-4">
-                <Button
-                  variant="affiliate"
-                  href={FLOOR_DECOR_LINK}
-                  ariaLabel="Shop at Floor and Decor"
-                >
-                  Shop at Floor &amp; Decor
-                </Button>
-              </div>
-            </article>
-          </div>
-
-          <p className="mt-4 sm:mt-6 text-xs text-center text-slate-500">
-            We may earn a commission if you buy through these links, at no extra
-            cost to you.
-          </p>
         </div>
       </section>
     </div>
