@@ -1,3 +1,4 @@
+import Navbar from "../../../components/Navbar";
 import Button from "../../../components/Button";
 import AFFILIATE_LINKS from "../../../components/affiliateLinks";
 
@@ -126,7 +127,9 @@ export default function BathroomRemodeling() {
   ];
 
   return (
-    <main className="bg-gray-100 text-gray-900">
+    <>
+      <Navbar />
+      <main className="bg-gray-100 text-gray-900">
       <article className="mx-auto max-w-2xl px-3 sm:px-4 py-8 sm:py-10 md:py-12">
 
         {/* HEADER */}
@@ -554,5 +557,6 @@ export default function BathroomRemodeling() {
 
       </article>
     </main>
+    </>
   );
 }

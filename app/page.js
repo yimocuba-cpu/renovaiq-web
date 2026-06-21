@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 
 export const metadata = {
@@ -19,7 +20,9 @@ const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
 
 export default function HomePage() {
   return (
-    <main className="bg-white text-gray-900">
+    <>
+      <Navbar />
+      <main className="bg-white text-gray-900">
       {/* HERO */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="grid gap-8 md:gap-10 lg:grid-cols-2 lg:items-center">
@@ -308,5 +311,6 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
