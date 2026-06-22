@@ -15,9 +15,6 @@ export const metadata = {
   ],
 };
 
-const LOWES_LINK = "https://www.lowes.com/c/Bathroom-ideas-inspiration-Bathroom";
-const FLOOR_DECOR_LINK = "https://www.flooranddecor.com/bath";
-
 export default function HomePage() {
   return (
     <>
@@ -85,118 +82,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* POR QUÉ EXISTE */}
-      <section className="border-t border-gray-100 bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
-              Why homeowners need a clearer estimate first
-            </h2>
-            <p className="text-center sm:text-left mt-4 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">
-              Bathroom projects often get expensive because the first number sounds
-              simple, but the final bill is not. Labor changes, materials shift, and
-              hidden issues show up later. RenovaIQ helps you see the structure
-              before you commit.
-            </p>
-          </div>
-
-          <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-5 md:grid-cols-3">
-            <div className="rounded-xl sm:rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
-              <p className="text-xs sm:text-sm font-semibold text-gray-900">No guesswork</p>
-              <p className="mt-2 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
-                Stop relying on rough ballpark numbers that change after the first
-                conversation.
-              </p>
-            </div>
-
-            <div className="rounded-xl sm:rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
-              <p className="text-xs sm:text-sm font-semibold text-gray-900">Less risk</p>
-              <p className="mt-2 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
-                See the cost structure earlier so you can make better decisions before
-                money starts moving.
-              </p>
-            </div>
-
-            <div className="rounded-xl sm:rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
-              <p className="text-xs sm:text-sm font-semibold text-gray-900">More control</p>
-              <p className="mt-2 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
-                Compare labor, materials, and extras in one place instead of piecing
-                it together later.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* AFILIADOS */}
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-center text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
             Helpful places to shop for your remodel
           </h2>
-          <p className="text-center sm:text-left mt-4 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">
-            Use trusted stores for your remodel materials. The price you pay does not
-            change if you click through our links, and those visits help support and
-            maintain the site at no extra cost to you.
+        </div>
+
+        <div className="mx-auto mt-6 max-w-2xl">
+          <p className="text-left text-sm sm:text-base leading-6 text-gray-600">
+            If you’re unsure where to buy materials, read our retailer guide in the blog. It explains which stores are best for fixtures, tile, and remodel-ready supplies so you can avoid delays and make smarter buying decisions.
           </p>
+
+          <div className="mt-6 flex justify-center">
+            <Button
+              href="/blog/bathroom-remodel-cost-usa#where-to-buy"
+              variant="primary"
+              ariaLabel="Go to retailer section in blog"
+            >
+              Read the store guide
+            </Button>
+          </div>
         </div>
-
-        <div className="mt-6 sm:mt-8 grid gap-5 sm:gap-6 md:grid-cols-2">
-          <article className="rounded-2xl sm:rounded-3xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm hover:shadow-lg transition-shadow">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
-              Materials source
-            </p>
-            <h3 className="mt-3 text-lg sm:text-xl font-bold text-gray-900">Lowe&apos;s</h3>
-            <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
-              A reliable starting point for bathroom remodel essentials, fixtures, and
-              everyday project materials. Useful when you want a broad selection and
-              quick access to common renovation products.
-            </p>
-            <p className="mt-3 text-xs text-gray-500">
-              The price you pay does not change. This helps support and maintain the site.
-            </p>
-            <div className="mt-4">
-              <Button
-                variant="affiliate"
-                href={LOWES_LINK}
-                ariaLabel="Shop at Lowe's"
-              >
-                Shop at Lowe&apos;s
-              </Button>
-            </div>
-          </article>
-
-          <article className="rounded-2xl sm:rounded-3xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm hover:shadow-lg transition-shadow">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400">
-              Materials source
-            </p>
-            <h3 className="mt-3 text-lg sm:text-xl font-bold text-gray-900">
-              Floor &amp; Decor
-            </h3>
-            <p className="mt-3 text-xs sm:text-sm leading-5 sm:leading-6 text-gray-600">
-              A strong choice for tile, flooring, and remodel-focused finishes. Ideal
-              for homeowners looking for design-forward materials and a more specialized
-              selection for bath projects.
-            </p>
-            <p className="mt-3 text-xs text-gray-500">
-              No extra cost to you. These visits help keep the tool running.
-            </p>
-            <div className="mt-4">
-              <Button
-                variant="affiliate"
-                href={FLOOR_DECOR_LINK}
-                ariaLabel="Shop at Floor and Decor"
-              >
-                Shop at Floor &amp; Decor
-              </Button>
-            </div>
-          </article>
-        </div>
-
-        <p className="mt-4 sm:mt-6 text-xs text-center text-gray-500">
-          We may earn a commission if you buy through these links, at no extra cost to
-          you.
-        </p>
       </section>
 
       {/* CONFIANZA / COLABORADOR */}
